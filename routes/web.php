@@ -19,4 +19,8 @@ Route::get('/room', function () {
     return view('frontend/room');
 });
 
+Route::get('/admin', function () {
+    return view('backend/first');
+});
+
 //Route::get('/room','FrontendController@room');
