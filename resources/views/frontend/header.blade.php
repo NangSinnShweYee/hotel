@@ -14,7 +14,7 @@
 		                        </li>
 		                        <li><a href="{{'/hall'}}">Hall</a></li>
 		                        <li><a href="{{'/bus'}}">Bus</a></li>
-		                        <li><a href="">Dining</a></li>
+		                        <li><a href="{{'/dining'}}">Dining</a></li>
 		                        
 		                        @guest
 								<li><a href="{{route('login')}}">Login</a></li>

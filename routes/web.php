@@ -25,6 +25,10 @@ Route::get('/hall', function(){
 	return view('frontend/hall');
 });
 
+Route::get('/dining', function(){
+	return view('frontend/dining');
+});
+
 Route::get('/admin', function () {
     return view('backend/first');
 });
