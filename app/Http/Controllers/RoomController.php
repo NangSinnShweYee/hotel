@@ -73,7 +73,8 @@ class RoomController extends Controller
     public function show($id)
     {
         //
-        
+        $room = Room::find($id);
+        return view('frontend/roomdetail',compact('room'));
     }
 
     /**

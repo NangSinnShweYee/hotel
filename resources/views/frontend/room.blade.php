@@ -112,7 +112,7 @@
 								<li><i class="icon-check"></i> Price does not include VAT &amp; services fee</li> --}}
 							<p>{{$room->description}}</p>
 							</ul>
-							<p><a class="btn btn-primary">Book now!</a></p>
+							<p><a class="btn btn-primary" href="{{route('rooms.show',$room->id)}}">Book now!</a></p>
 						</div>
 					</div>
 					@endforeach
