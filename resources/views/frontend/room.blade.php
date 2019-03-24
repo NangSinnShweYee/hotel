@@ -95,109 +95,27 @@
 					</div>
 				</div>
 				<div class="row">
+						@foreach ($rooms as $room)  
 					<div class="col-md-4 room-wrap animate-box">
 						<a href="#" class="room image-popup-link" style="background-image: url(template/images/1.jpg);"></a>
-						
+					{{-- <img src="{{$room->photo}}" class="room img-fluid" width="" alt=""> --}}
 						<div class="desc">
-							<h3><a href="rooms-suites.html">Suite</a></h3>
+						<h3><a href="#">{{$room->room_categories->name}}</a></h3>
 							<p class="price">
 								<span class="currency">$</span>
-								<span class="price-room">149</span>
+							<span class="price-room">{{$room->price}}</span>
 								<span class="per">/ per night</span>
 							</p>
 							<ul>
-								<li><i class="icon-check"></i> Only 10 rooms are available</li>
+								{{-- <li><i class="icon-check"></i> Only 10 rooms are available</li>
 								<li><i class="icon-check"></i> Breakfast included</li>
-								<li><i class="icon-check"></i> Price does not include VAT &amp; services fee</li>
+								<li><i class="icon-check"></i> Price does not include VAT &amp; services fee</li> --}}
+							<p>{{$room->description}}</p>
 							</ul>
 							<p><a class="btn btn-primary">Book now!</a></p>
 						</div>
 					</div>
-					<div class="col-md-4 room-wrap animate-box">
-						<a href="#" class="room image-popup-link" style="background-image: url(template/images/2.jpg);"></a>
-						<div class="desc">
-							<h3><a href="rooms-suites.html">Double Room</a></h3>
-							<p class="price">
-								<span class="currency">$</span>
-								<span class="price-room">199</span>
-								<span class="per">/ per night</span>
-							</p>
-							<ul>
-								<li><i class="icon-check"></i> Perfect for traveling couples</li>
-								<li><i class="icon-check"></i> Breakfast included</li>
-								<li><i class="icon-check"></i> Price does not include VAT &amp; services fee</li>
-							</ul>
-							<p><a class="btn btn-primary">Book now!</a></p>
-						</div>
-					</div>
-					<div class="col-md-4 room-wrap animate-box">
-						<a href="#" class="room image-popup-link" style="background-image: url(template/images/3.jpg);"></a>
-						<div class="desc">
-							<h3><a href="rooms-suites.html">Family Room</a></h3>
-							<p class="price">
-								<span class="currency">$</span>
-								<span class="price-room">249</span>
-								<span class="per">/ per night</span>
-							</p>
-							<ul>
-								<li><i class="icon-check"></i> Two double beds</li>
-								<li><i class="icon-check"></i> Babysitting facilities</li>
-								<li><i class="icon-check"></i> 1 free bed available on request</li>
-							</ul>
-							<p><a class="btn btn-primary">Book now!</a></p>
-						</div>
-					</div>
-					<div class="col-md-4 room-wrap animate-box">
-						<a href="images/room-4.jpg" class="room image-popup-link" style="background-image: url(template/images/1.jpg);"></a>
-						<div class="desc">
-							<h3><a href="rooms-suites.html">Classic Double Room</a></h3>
-							<p class="price">
-								<span class="currency">$</span>
-								<span class="price-room">179</span>
-								<span class="per">/ per night</span>
-							</p>
-							<ul>
-								<li><i class="icon-check"></i> Only 10 rooms are available</li>
-								<li><i class="icon-check"></i> Breakfast included</li>
-								<li><i class="icon-check"></i> Price does not include VAT &amp; services fee</li>
-							</ul>
-							<p><a class="btn btn-primary">Book now!</a></p>
-						</div>
-					</div>
-					<div class="col-md-4 room-wrap animate-box">
-						<a href="images/room-5.jpg" class="room image-popup-link" style="background-image: url(template/images/3.jpg);"></a>
-						<div class="desc">
-							<h3><a href="rooms-suites.html">Superior Double Room</a></h3>
-							<p class="price">
-								<span class="currency">$</span>
-								<span class="price-room">270</span>
-								<span class="per">/ per night</span>
-							</p>
-							<ul>
-								<li><i class="icon-check"></i> Perfect for traveling couples</li>
-								<li><i class="icon-check"></i> Breakfast included</li>
-								<li><i class="icon-check"></i> Price does not include VAT &amp; services fee</li>
-							</ul>
-							<p><a class="btn btn-primary">Book now!</a></p>
-						</div>
-					</div>
-					<div class="col-md-4 room-wrap animate-box">
-						<a href="images/room-5.jpg" class="room image-popup-link" style="background-image: url(template/images/2.jpg);"></a>
-						<div class="desc">
-							<h3><a href="rooms-suites.html">Superior Double Room</a></h3>
-							<p class="price">
-								<span class="currency">$</span>
-								<span class="price-room">270</span>
-								<span class="per">/ per night</span>
-							</p>
-							<ul>
-								<li><i class="icon-check"></i> Perfect for traveling couples</li>
-								<li><i class="icon-check"></i> Breakfast included</li>
-								<li><i class="icon-check"></i> Price does not include VAT &amp; services fee</li>
-							</ul>
-							<p><a class="btn btn-primary">Book now!</a></p>
-						</div>
-					</div>
+					@endforeach
 				</div>
 			</div>
 		</div>

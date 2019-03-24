@@ -44,12 +44,12 @@ class RoomController extends Controller
     {
         //
         //Upload files
-        if($request->hasFile('photo')){
+        // if($request->hasFile('photo')){
             $photo = $request->file('photo');
             $name = $photo->getClientOriginalName();
             $photo->move(public_path().'/storage/image/',$name);
             $photo = '/storage/image/'.$name;
-        }
+        // }
         Room::create([
             "category_id" => request('category_id'),
             "room_number" => request('room_number'),
@@ -61,7 +61,7 @@ class RoomController extends Controller
             
 
         ]);
-        return redirect('/');
+        return redirect('/rooms');
     }
 
     /**
@@ -73,6 +73,7 @@ class RoomController extends Controller
     public function show($id)
     {
         //
+        
     }
 
     /**
