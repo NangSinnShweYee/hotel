@@ -19,9 +19,14 @@
             <span>Dashboard</span></a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="{{'/admin'}}">
+        <a class="nav-link" href="{{'/rooms'}}">
                 <i class="fas fa-fw fa-tachometer-alt"></i>
                 <span>Rooms</span></a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="{{'/room_categories'}}">
+                <i class="fas fa-fw fa-tachometer-alt"></i>
+                <span>Room Categories</span></a>
     </li>
 
 </ul>
