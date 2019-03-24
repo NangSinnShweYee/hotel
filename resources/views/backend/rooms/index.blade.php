@@ -12,33 +12,47 @@
       </div><br />
     @endif
     <div class="container">
-    <a href="{{route('room_categories.create')}}" class="btn btn-success" >Create</a>
+    <a href="{{route('rooms.create')}}" class="btn btn-success" >Create</a>
     <table class="table table-striped">
-      <thead>
-          <tr>
-            <td>ID</td>
-            <td>Room Category Name</td>
-            
-            <td colspan="2">Action</td>
-          </tr>
-      </thead>
+            <thead>
+                    <tr>
+                      <td>No.</td>
+                      <td>Room Number</td>
+                      <td>Photo</td>
+                      <td>Description</td>
+                      <td>Price</td>
+                      <td>Availability</td>
+                      <td>Bedcount</td>
+                      <td>Category</td>
+                      
+                      <td colspan="2">Action</td>
+                    </tr>
+                </thead>      
       <tbody>
-          @foreach($room_categories as $room_categories)
-          <tr>
-              <td>{{$room_categories->id}}</td>
-              <td>{{$room_categories->name}}</td>
-              
-              <td><a href="{{ route('room_categories.edit',$room_categories->id)}}" class="btn btn-primary">Edit</a></td>
-              <td>
-                  <form action="{{ route('room_categories.destroy', $room_categories->id)}}" method="post">
-                    @csrf
-                    @method('DELETE')
-                    <button class="btn btn-danger" type="submit">Delete</button>
-                  </form>
-              </td>
-          </tr>
-          @endforeach
-      </tbody>
+          <?php $i=1; ?>
+            @foreach($rooms as $room)
+            <tr>
+                <td>{{$i}}</td>
+                <td>{{$room->room_number}}</td>
+                <td><img src="{{$room->photo}}" alt="" width="200px"></td>
+                <td>{{$room->description}}</td>
+                <td>{{$room->price}}</td>
+                <td>{{$room->Availability}}</td>
+                <td>{{$room->bedcount}}</td>
+                <td>{{$room->room_categories->name}}</td>
+                
+                <td><a href="{{ route('rooms.edit',$room->id)}}" class="btn btn-primary">Edit</a></td>
+                <td>
+                    <form action="{{ route('rooms.destroy', $room->id)}}" method="post">
+                      @csrf
+                      @method('DELETE')
+                      <button class="btn btn-danger" type="submit">Delete</button>
+                    </form>
+                </td>
+            </tr>
+            <?php $i++; ?>
+            @endforeach
+        </tbody>
     </table>
     </div>
   <div>

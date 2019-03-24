@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\RoomCategory;
+use App\Room;
 
 class RoomController extends Controller
 {
@@ -15,6 +16,9 @@ class RoomController extends Controller
     public function index()
     {
         //
+        $rooms = Room::all();
+        return view('backend/rooms.index',compact('rooms'));
+
     }
 
     /**
@@ -49,12 +53,15 @@ class RoomController extends Controller
         Room::create([
             "category_id" => request('category_id'),
             "room_number" => request('room_number'),
-            "image" => $photo,
+            "photo" => $photo,
             "description" => request('description'),
-            "slug" => uniqid(),
-            "user_id" => Auth::id(),
+            "price" => request('price'),
+            "bedcount" => request('bedcount'),
+           
+            
 
         ]);
+        return redirect('/');
     }
 
     /**
