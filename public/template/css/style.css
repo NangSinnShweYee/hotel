@@ -86,6 +86,7 @@ h1, h2, h3, h4, h5, h6, figure {
 
 .qbootstrap-nav {
   margin: 0;
+  background: #c2d0da;
 }
 @media screen and (max-width: 768px) {
   .qbootstrap-nav {
@@ -467,6 +468,7 @@ h1, h2, h3, h4, h5, h6, figure {
 #qbootstrap-footer {
   padding: 6em 0;
   clear: both;
+  background:#c2d0da;
 }
 @media screen and (max-width: 768px) {
   #qbootstrap-about,
