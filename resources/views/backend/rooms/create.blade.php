@@ -21,7 +21,7 @@
         </div><br />
         @endif
         <div class="container">
-            <form method="post" action="{{ route('rooms.store') }}">
+            <form method="post" action="{{ route('rooms.store') }}" enctype="multipart/form-data">
                 <div class="form-group">
                     <label for="category_id" class="col-md-4 control-label">Category</label>
                     <select name="category_id" class="form-control">
@@ -34,8 +34,36 @@
                 </div>
                 <div class="form-group">
                     @csrf
-                <label for="name">Room Number:</label>
+                    <label for="name">Room Number:</label>
                     <input type="text" class="form-control" name="room_number" />
+                </div>
+                <div class="form-group">
+                    <label for="user_email" class="col-md-4 control-label">Photo</label>
+                    <input type="file" name="photo"
+                        class="form-control-file {{ $errors->has('photo') ? ' is-invalid' : '' }}" />
+                    @if ($errors->has('photo'))
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $errors->first('photo') }}</strong>
+                    </span>
+                    @endif
+                </div>
+                <div class="form-group">
+                    <label for="user_password" class="col-md-4 control-label">description</label>
+                    <textarea name="description" cols="30" rows="10"
+                        class="form-control {{ $errors->has('description') ? ' is-invalid' : '' }}"></textarea>
+                    @if ($errors->has('description'))
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $errors->first('description') }}</strong>
+                    </span>
+                    @endif
+                </div>
+                <div class="form-group">                        
+                        <label for="name">Price </label>
+                        <input type="number" class="form-control" name="price" />
+                </div>
+                <div class="form-group">                        
+                        <label for="name">Bedcount </label>
+                        <input type="number" class="form-control" name="bedcount" />
                 </div>
 
                 <button type="submit" class="btn btn-primary">Add</button>
