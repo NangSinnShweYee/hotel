@@ -27,3 +27,6 @@ Route::resource('room_categories', 'RoomCategoryController');
 Route::resource('rooms', 'RoomController');
 
 //Route::get('/room','FrontendController@room');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
