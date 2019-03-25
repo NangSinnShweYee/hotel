@@ -115,7 +115,7 @@
 					<div class="col-md-12 animate-box">
 						<div class="owl-carousel owl-carousel2">
 							<div class="item">
-								<a href="images/room-1.jpg" class="room image-popup-link" style="background-image: url(images/room-1.jpg);"></a>
+								<a href="#" class="room image-popup-link" style="background-image: url(template/images/1.jpg);"></a>
 								<div class="desc">
 									<h3><a href="rooms-suites.html">Suite</a></h3>
 									<p class="price">
