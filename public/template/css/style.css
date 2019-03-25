@@ -1415,10 +1415,12 @@ input[type="text"] {
 
 #qbootstrap-footer {
   margin-top: 20px !important;
+
 }
 #qbootstrap-footer .qbootstrap-footer-links {
   padding: 0;
   margin: 0;
+  color: white;
 }
 @media screen and (max-width: 768px) {
   #qbootstrap-footer .qbootstrap-footer-links {
@@ -1434,6 +1436,7 @@ input[type="text"] {
 #qbootstrap-footer .qbootstrap-footer-links li a {
   color: rgba(0, 0, 0, 0.5);
   text-decoration: none;
+  color: white;
 }
 #qbootstrap-footer .qbootstrap-footer-links li a:hover {
   text-decoration: underline;
@@ -1444,6 +1447,7 @@ input[type="text"] {
 }
 #qbootstrap-footer .qbootstrap-social-icons li a:first-child {
   padding-left: 0;
+
 }
 #qbootstrap-footer h4 {
   margin-bottom: 30px;
@@ -1711,13 +1715,13 @@ input[type="text"] {
 }
 
 .btn-primary {
-  background: #F95959;
+  background: green;
   color: #fff;
-  border: 2px solid #F95959;
+  border: 2px solid green;
 }
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
-  background: #fa7272 !important;
-  border-color: #fa7272 !important;
+  background: #C0C0C0 !important;
+  border-color: #C0C0C0 !important;
 }
 .btn-primary.btn-outline {
   background: transparent;
@@ -1890,3 +1894,66 @@ input[type="text"] {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+section.pricing {
+  background: #007bff;
+  background: linear-gradient(to right, #0062E6, #33AEFF);
+}
+
+.pricing .card {
+  border: none;
+  border-radius: 1rem;
+  transition: all 0.2s;
+  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+}
+
+.pricing hr {
+  margin: 1.5rem 0;
+}
+
+.pricing .card-title {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+  letter-spacing: .1rem;
+  font-weight: bold;
+}
+
+.pricing .card-price {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.pricing .card-price .period {
+  font-size: 0.8rem;
+}
+
+.pricing ul li {
+  margin-bottom: 1rem;
+}
+
+.pricing .text-muted {
+  opacity: 0.7;
+}
+
+.pricing .btn {
+  font-size: 80%;
+  border-radius: 1rem;
+  letter-spacing: .1rem;
+  font-weight: bold;
+  padding: 1rem;
+  opacity: 0.7;
+  transition: all 0.2s;
+}
+
+/* Hover Effects on Card */
+
+@media (min-width: 992px) {
+  .pricing .card:hover {
+    margin-top: -.25rem;
+    margin-bottom: .25rem;
+    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.3);
+  }
+  .pricing .card:hover .btn {
+    opacity: 1;
+  }
+}
