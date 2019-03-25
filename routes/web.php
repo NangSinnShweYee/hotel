@@ -31,7 +31,7 @@ Route::get('/dining', function(){
 
 Route::get('/admin', function () {
     return view('backend/first');
-});
+})->name('admin');
 
 Route::resource('room_categories', 'RoomCategoryController');
 Route::resource('rooms', 'RoomController');
@@ -40,4 +40,4 @@ Route::resource('room_bookings', 'RoomBookingController');
 //Route::get('/room','FrontendController@room');
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@index')->name('home');

@@ -16,7 +16,7 @@
      
       <thead>
             <tr>
-              <td>ID</td>
+              <td>No</td>
               <td>Room Number</td>
               <td>User name</td>
               <td>Check in date</td>
@@ -26,14 +26,17 @@
             </tr>
         </thead>
       <tbody>
+          <?php $i=1 ?>
             @foreach($room_bookings as $room_booking)
             <tr>
-                <td>{{$room_booking->rooms['name']}}</td>
+            <td>{{$i}}</td>
+                <td>{{$room_booking->rooms['room_number']}}</td>
                 <td>{{$room_booking->users['name']}}</td>
                 <td>{{$room_booking->check_in}}</td>
-                <td>{{$room_booking->check_out}}</td>                
+                <td>{{$room_booking->check_out}}</td>               
                 
             </tr>
+            <?php $i++; ?>
             @endforeach
         </tbody>
     </table>
