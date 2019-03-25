@@ -43,6 +43,10 @@ class RoomBookingController extends Controller
     public function store(Request $request)
     {
         //
+        $request->validate([
+            'check_in' => 'required|min:10',
+            'check_out' => 'required',            
+        ]);
         RoomBooking::create([
             "room_id" => request('room_id'),
             "user_id" => request('user_id'),
