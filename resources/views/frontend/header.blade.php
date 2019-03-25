@@ -29,8 +29,8 @@
 					
 											{{-- <a class="dropdown-item" href="#">Profile</a>										 --}}
 					
-											<div class="dropdown-divider"></div>
-											<a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+											{{-- <div class="dropdown-divider"></div> --}}
+											<a class="dropdown-item" style="padding: 0; margin-left:12px; color:black;" href="{{ route('logout') }}" onclick="event.preventDefault();
 																		 document.getElementById('logout-form').submit();">
 												{{ __('Logout') }}
 											</a>
