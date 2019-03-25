@@ -73,6 +73,7 @@
       <div class="col-lg-4">
         <div class="card">
           <div class="card-body">
+          	<img class="card-img-top img-fluid" src="template/images/bus1.jpg" width="100%">
             <h5 class="card-title text-muted text-uppercase text-center">Pro</h5>
             <h6 class="card-price text-center">$49<span class="period">/month</span></h6>
             <hr>
