@@ -44,7 +44,7 @@ class RoomCategoryController extends Controller
         RoomCategory::create([
            'name'=>request('roomcategory_name')
         ]);
-        
+
        $roomcategories = RoomCategory::all();
 
         
@@ -101,6 +101,11 @@ class RoomCategoryController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $room_category=RoomCategory::find($id);
+        foreach ($room_category->rooms as $room) {
+            $room->delete();
+        }
+        $room_category->delete();
+        return redirect('/room_categories');
     }
 }
