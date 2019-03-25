@@ -21,13 +21,16 @@
                     <i class="icon icon-calendar2"></i>
                     <input type="text" id="date" class="form-control date" placeholder="Check-in date">
                 </div>
+            </div>
+            <div class="row">
                 <div class="col-md-3">
                     <i class="icon icon-calendar2"></i>
                     <input type="text" id="date" class="form-control date" placeholder="Check-out date">
                 </div>
-
             </div>
             <input type="submit" name="submit" id="submit" value="Book" class="btn btn-primary">
+            </div>
+            
         
         </form>
     </div>

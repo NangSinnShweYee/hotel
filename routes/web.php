@@ -17,6 +17,13 @@ Route::get('/', function () {
 
 
 Route::get('/room', 'MainController@room');
+Route::get('/bus', function(){
+	return view('frontend/bus');
+});
+
+Route::get('/hall', function(){
+	return view('frontend/hall');
+});
 
 Route::get('/admin', function () {
     return view('backend/first');

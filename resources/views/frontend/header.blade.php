@@ -12,8 +12,8 @@
 		                            <a href="{{'/room'}}">Rooms</a>
 
 		                        </li>
-		                        <li><a href="">Hall</a></li>
-		                        <li><a href="">Bus</a></li>
+		                        <li><a href="{{'/hall'}}">Hall</a></li>
+		                        <li><a href="{{'/bus'}}">Bus</a></li>
 		                        <li><a href="">Dining</a></li>
 		                        
 		                        @guest
