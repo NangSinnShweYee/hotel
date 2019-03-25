@@ -3,7 +3,7 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-	<head>
+<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Hotel Booking System</title>
@@ -24,68 +24,71 @@
 	Facebook: 		https://www.facebook.com/Qbootstrap
 
 	//////////////////////////////////////////////////////
-	 -->
+-->
 
-  	<!-- Facebook and Twitter integration -->
-	<meta property="og:title" content=""/>
-	<meta property="og:image" content=""/>
-	<meta property="og:url" content=""/>
-	<meta property="og:site_name" content=""/>
-	<meta property="og:description" content=""/>
-	<meta name="twitter:title" content="" />
-	<meta name="twitter:image" content="" />
-	<meta name="twitter:url" content="" />
-	<meta name="twitter:card" content="" />
+<!-- Facebook and Twitter integration -->
+<meta property="og:title" content=""/>
+<meta property="og:image" content=""/>
+<meta property="og:url" content=""/>
+<meta property="og:site_name" content=""/>
+<meta property="og:description" content=""/>
+<meta name="twitter:title" content="" />
+<meta name="twitter:image" content="" />
+<meta name="twitter:url" content="" />
+<meta name="twitter:card" content="" />
 
-	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,700" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700" rel="stylesheet">
-	
-	<!-- Animate.css -->
-	<link rel="stylesheet" href="{{ asset('template/css/animate.css') }}">
-	<!-- Icomoon Icon Fonts-->
-	<link rel="stylesheet" href="{{ asset('template/css/icomoon.css') }}">
-	<!-- Bootstrap  -->
-	<link rel="stylesheet" href="{{ asset('template/css/bootstrap.css') }}">
+<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700" rel="stylesheet">
 
-	<!-- Magnific Popup -->
-	<link rel="stylesheet" href="{{ asset('template/css/magnific-popup.css') }}">
+<!-- Animate.css -->
+<link rel="stylesheet" href="{{ asset('template/css/animate.css') }}">
+<!-- Icomoon Icon Fonts-->
+<link rel="stylesheet" href="{{ asset('template/css/icomoon.css') }}">
+<!-- Bootstrap  -->
+<link rel="stylesheet" href="{{ asset('template/css/bootstrap.css') }}">
 
-	<!-- Flexslider  -->
-	<link rel="stylesheet" href="{{ asset('template/css/flexslider.css') }}">
+<!-- Magnific Popup -->
+<link rel="stylesheet" href="{{ asset('template/css/magnific-popup.css') }}">
 
-	<!-- Owl Carousel -->
-	<link rel="stylesheet" href="{{ asset('template/css/owl.carousel.min.css') }}">
-	<link rel="stylesheet" href="{{ asset('template/css/owl.theme.default.min.css') }}">
-	
-	<!-- Date Picker -->
-	<link rel="stylesheet" href="{{ asset('template/css/bootstrap-datepicker.css') }}">
+<!-- Flexslider  -->
+<link rel="stylesheet" href="{{ asset('template/css/flexslider.css') }}">
 
-	<!-- Theme style  -->
-	<link rel="stylesheet" href="{{ asset('template/css/style.css') }}">
+<!-- Owl Carousel -->
+<link rel="stylesheet" href="{{ asset('template/css/owl.carousel.min.css') }}">
+<link rel="stylesheet" href="{{ asset('template/css/owl.theme.default.min.css') }}">
 
-	<!-- Modernizr JS -->
-	<script src="{{ asset('template/js/modernizr-2.6.2.min.js') }}"></script>
-	<!-- FOR IE9 below -->
+<link rel="stylesheet" href="{{ asset('template/css/all.css') }}">
+<link rel="stylesheet" href="{{ asset('template/css/bootstrap.min.css') }}">
+
+<!-- Date Picker -->
+<link rel="stylesheet" href="{{ asset('template/css/bootstrap-datepicker.css') }}">
+
+<!-- Theme style  -->
+<link rel="stylesheet" href="{{ asset('template/css/style.css') }}">
+
+<!-- Modernizr JS -->
+<script src="{{ asset('template/js/modernizr-2.6.2.min.js') }}"></script>
+<!-- FOR IE9 below -->
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
-	<![endif]-->
+<![endif]-->
 
-	</head>
-	<body>
-		
+</head>
+<body>
+
 	<div class="qbootstrap-loader"></div>
 
 	<div id="page">
-<!--header -->
-	@include('frontend/header')
-<!--header -->
+		<!--header -->
+		@include('frontend/header')
+		<!--header -->
 
-	<!--Content-->
-	@yield('content')
+		<!--Content-->
+		@yield('content')
 
-	
-	<!--Footer-->
-	@include('frontend/footer')
+
+		<!--Footer-->
+		@include('frontend/footer')
 	</div>
 
 	<div class="gototop js-top">
@@ -114,6 +117,7 @@
 	<!-- Main -->
 	<script src="{{asset('template/js/main.js')}}"></script>
 
-	</body>
+
+</body>
 </html>
 
