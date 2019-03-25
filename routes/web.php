@@ -31,7 +31,7 @@ Route::get('/dining', function(){
 
 Route::get('/admin', function () {
     return view('backend/first');
-});
+})->name('admin');
 
 Route::resource('room_categories', 'RoomCategoryController');
 Route::resource('rooms', 'RoomController');
