@@ -24,14 +24,14 @@
             </tr>
         </thead>
       <tbody>
-            @foreach($room_categories as $room_categories)
+            @foreach($room_categories as $room_category)
             <tr>
-                <td>{{$room_categories->id}}</td>
-                <td>{{$room_categories->name}}</td>
+                <td>{{$room_category->id}}</td>
+                <td>{{$room_category->name}}</td>
                 
-                <td><a href="{{ route('room_categories.edit',$room_categories->id)}}" class="btn btn-primary">Edit</a></td>
+                <td><a href="{{ route('room_categories.edit',$room_category->id)}}" class="btn btn-primary">Edit</a></td>
                 <td>
-                    <form action="{{ route('room_categories.destroy', $room_categories->id)}}" method="post">
+                    <form action="{{ route('room_categories.destroy', $room_category->id)}}" method="post">
                       @csrf
                       @method('DELETE')
                       <button class="btn btn-danger" type="submit">Delete</button>

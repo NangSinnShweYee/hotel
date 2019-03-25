@@ -41,7 +41,11 @@ class RoomCategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        RoomCategory::create([
+           'name'=>request('roomcategory_name')
+        ]);
+        return view('backend/room_categories.index');
+            
     }
 
     /**
@@ -63,7 +67,8 @@ class RoomCategoryController extends Controller
      */
     public function edit($id)
     {
-        //
+        $room_categories = RoomCategory::find($id);
+        return view('backend.room_categories.edit',compact('room_categories'));
     }
 
     /**
@@ -75,7 +80,12 @@ class RoomCategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        /*dd($request);*/
+        //$room_categories = RoomCategory::all();
+        $room_category=RoomCategory::find($id);
+        $room_category->name=request('roomcategory_name');
+        $room_category->save();
+        return redirect('/room_categories');
     }
 
     /**
