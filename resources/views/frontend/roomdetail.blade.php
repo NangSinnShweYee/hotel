@@ -32,13 +32,7 @@
                 </div>
             </div>
             <input type="submit" name="submit" id="submit" value="Book" class="btn btn-primary">
-<<<<<<< HEAD
-            </div>
-            
-        
-=======
         @csrf
->>>>>>> e9c3fb6f6c48484506755df14460784a97d09751
         </form>
     </div>
 
