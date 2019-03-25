@@ -9,11 +9,16 @@
         <img src="{{asset($rooms->photo)}}" class="img-fluid" width="700px" alt="">
         <h1>{{$rooms->room_categories->name}}</h1>
         <h3>{{$rooms->description}}</h3>
-        <p class="price">
+        <p class="price" style="color:black">            
             <span class="currency">$</span>
             <span class="price-room">{{$rooms->price}}</span>
             <span class="per">/ per night</span>
         </p>
+        @if(session()->get('overlap'))    
+            <div class="alert alert-danger">
+            {{ session()->get('overlap') }}  
+            </div><br />
+        @endif
 
         <form method="post" action="{{route('room_bookings.store')}}">
 

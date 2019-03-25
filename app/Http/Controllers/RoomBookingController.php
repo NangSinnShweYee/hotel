@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\RoomBooking;
+use VM\TimeOverlapCalculator\TimeOverlapCalculator;
+use VM\TimeOverlapCalculator\Entity\TimeSlot;
+use VM\TimeOverlapCalculator\Generator\TimeSlotGenerator;
+use Carbon\Carbon;
 
 class RoomBookingController extends Controller
 {
@@ -47,14 +51,47 @@ class RoomBookingController extends Controller
             'check_in' => 'required|min:10',
             'check_out' => 'required',            
         ]);
-        RoomBooking::create([
-            "room_id" => request('room_id'),
-            "user_id" => request('user_id'),
-            "check_in" => request('check_in'),
-            "check_out" => request('check_out'),   
+        $check_indate = Carbon::parse( request('check_in'));
+        $check_outdate = Carbon::parse( request('check_out'));
 
-        ]);
-        return redirect('/')->with('success', 'Booking has been created');
+        
+        $calculator = new TimeOverlapCalculator();  
+        $baseTimeSlot = new TimeSlot(
+            $check_indate,
+            $check_outdate
+        );
+
+        $isOverlap = false;
+        
+        $bookings = RoomBooking::where('room_id','=', request('room_id'))->get();
+        foreach ($bookings as $booking) {
+            $testin = Carbon::parse( $booking->check_in);
+            $testout = Carbon::parse( $booking->check_out);
+            $overlappingTimeSlot = new TimeSlot(
+                $testin,
+                $testout
+             );
+             $isOverlap = $calculator->isOverlap($baseTimeSlot, $overlappingTimeSlot);
+        }
+        
+
+        if($isOverlap){
+            return back()->with('overlap','The room is not available in that time period.');
+            
+        }
+        else{
+            // echo "not overlap";
+            RoomBooking::create([
+                "room_id" => request('room_id'),
+                "user_id" => request('user_id'),
+                "check_in" => request('check_in'),
+                "check_out" => request('check_out'),   
+    
+            ]);
+            return redirect('/')->with('success', 'Booking has been created');
+        }
+        
+        
     }
 
     /**
