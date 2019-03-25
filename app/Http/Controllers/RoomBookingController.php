@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\RoomBooking;
 
 class RoomBookingController extends Controller
 {
@@ -35,6 +36,14 @@ class RoomBookingController extends Controller
     public function store(Request $request)
     {
         //
+        RoomBooking::create([
+            "room_id" => request('room_id'),
+            "user_id" => request('user_id'),
+            "check_in" => request('check_in'),
+            "check_out" => request('check_out'),   
+
+        ]);
+        return redirect('/')->with('success', 'Booking has been created');
     }
 
     /**

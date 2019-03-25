@@ -1,5 +1,10 @@
 @extends('frontend/master')
 @section('content')
+@if(session()->get('success'))    
+    <div class="alert alert-success">
+      {{ session()->get('success') }}  
+    </div><br />
+  @endif
 <aside id="qbootstrap-hero">
             <div class="flexslider">
                 <ul class="slides">
