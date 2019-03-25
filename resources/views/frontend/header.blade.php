@@ -24,13 +24,13 @@
 								
 		                        <li class="nav-item dropdown mx-2">
 																	 
-										<a href="#" class="dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" style="cursor:pointer;">{{Auth::user()->name}}</a>
+										<a href="#" class="dropdown-toggle" id="navbarDropdown" role="" data-toggle="dropdown" style="cursor:pointer;">{{Auth::user()->name}}</a>
 											<div class="dropdown-menu" aria-labelledby="navbarDropdown">										
 					
 											{{-- <a class="dropdown-item" href="#">Profile</a>										 --}}
 					
-											<div class="dropdown-divider"></div>
-											<a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+											{{-- <div class="dropdown-divider"></div> --}}
+											<a class="dropdown-item" style="padding: 0; margin-left:12px; color:black;" href="{{ route('logout') }}" onclick="event.preventDefault();
 																		 document.getElementById('logout-form').submit();">
 												{{ __('Logout') }}
 											</a>
