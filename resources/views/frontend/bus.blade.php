@@ -13,7 +13,7 @@
 						<h2 class="text-center">Sight Seeing package</h2>
 					</div>
 					<div class="card-body">
-						<img src="template/images/bus1.jpg" alt="" class="card-img-top">
+						<img src="template/images/bus3.jpeg" alt="" class="card-img-top">
 						<h5 class="card-title text-muted text-uppercase text-center">Price</h5>
 						<h5 class="card-price text-center pb-4">MMK 113,409<span class="period">/person</span></h5>
 

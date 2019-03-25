@@ -16,7 +16,7 @@
                                 <div class="slider-text-inner text-center">
                                     <span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span>
                                     <h1>We offer you the best hotel</h1>
-                                        <h2>100% Free html5 templates Made by <a href="http://qbootstrap.com/" target="_blank">QBootstrap.com</a></h2>
+                                        
                                         
                                 </div>
                             </div>
@@ -31,7 +31,7 @@
                                 <div class="slider-text-inner text-center">
                                     <span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span>
                                     <h1>Perfect Place for Dining</h1>
-                                        <h2>100% Free html5 templates Made by <a href="http://qbootstrap.com/" target="_blank">QBootstrap.com</a></h2>
+                                        
                                         
                                 </div>
                             </div>
@@ -46,7 +46,7 @@
                                 <div class="slider-text-inner text-center">
                                     <span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span>
                                     <h1>Welcome to our Hotel</h1>
-                                        <h2>100% Free html5 templates Made by <a href="http://qbootstrap.com/" target="_blank">QBootstrap.com</a></h2>
+                                        
                                        
                                 </div>
                             </div>

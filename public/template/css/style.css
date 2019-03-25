@@ -1962,8 +1962,8 @@ section.pricing {
 /*# sourceMappingURL=style.css.map */
 
 section.pricing {
-  background: #007bff;
-  background: linear-gradient(to right, #0062E6, #33AEFF);
+  
+  background: white;
 }
 
 .pricing .card {

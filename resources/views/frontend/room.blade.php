@@ -13,7 +13,7 @@
 				   				<div class="slider-text-inner text-center">
 				   					<span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span>
 				   					<h1>Rooms &amp; Suites</h1>
-										<h2>100% Free html5 templates Made by <a href="http://qbootstrap.com/" target="_blank">QBootstrap.com</a></h2>
+										
 				   				</div>
 				   			</div>
 				   		</div>
