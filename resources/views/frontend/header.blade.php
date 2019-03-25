@@ -7,8 +7,8 @@
 		                </div>
 		                <div class="col-xs-10 text-right menu-1">
 		                    <ul>
-		                        <li class="active"><a href="">Home</a></li>
-		                        <li class="has-dropdown">
+		                        <li class=""><a href="">Home</a></li>
+		                        <li class="">
 		                            <a href="{{'/room'}}">Rooms</a>
 
 		                        </li>
