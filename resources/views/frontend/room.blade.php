@@ -4,7 +4,8 @@
 <aside id="qbootstrap-hero">
 			<div class="flexslider">
 				<ul class="slides">
-			   	<li style="background-image: url(frontend/images/1.jpg);">
+			   	<li style="background-image: url(template/images/1.jpg);">
+
 			   		<div class="overlay-gradient"></div>
 			   		<div class="container-fluid">
 			   			<div class="row">
@@ -77,7 +78,7 @@
 		                  </div>
 		                </div>
 		                <div class="col-md-2">
-		                  <input type="submit" name="submit" id="submit" value="Search" class="btn btn-primary btn-block">
+		                  <input type="submit" name="submit" id="submit" value="Search" class="btn btn-success btn-block">
 		                </div>
 		              </div>
 		            </form>
@@ -97,8 +98,8 @@
 				<div class="row">
 						@foreach ($rooms as $room)  
 					<div class="col-md-4 room-wrap animate-box">
-						<a href="#" class="room image-popup-link" style="background-image: url(template/images/1.jpg);"></a>
-					{{-- <img src="{{$room->photo}}" class="room img-fluid" width="" alt=""> --}}
+						<a href="{{$room->photo}}" class="room image-popup-link" style="background-image: url({{$room->photo}});"></a>
+					
 						<div class="desc">
 						<h3><a href="#">{{$room->room_categories->name}}</a></h3>
 							<p class="price">
@@ -112,11 +113,13 @@
 								<li><i class="icon-check"></i> Price does not include VAT &amp; services fee</li> --}}
 							<p>{{$room->description}}</p>
 							</ul>
-							<p><a class="btn btn-primary" href="{{route('rooms.show',$room->id)}}">Book now!</a></p>
+							<p><a class="btn btn-success" href="{{route('rooms.show',$room->id)}}">Book now!</a></p>
 						</div>
 					</div>
 					@endforeach
+
 				</div>
+				{{ $rooms->links() }}
 			</div>
 		</div>
 @endsection

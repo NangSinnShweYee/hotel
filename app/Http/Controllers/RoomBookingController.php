@@ -15,6 +15,8 @@ class RoomBookingController extends Controller
     public function index()
     {
         //
+        $room_bookings = RoomBooking::all();
+        return view('backend/room_bookings.index',compact('room_bookings'));
     }
 
     /**
