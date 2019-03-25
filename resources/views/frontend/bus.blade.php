@@ -1,97 +1,82 @@
 @extends('frontend/master')
 @section('content')
-		<aside id="qbootstrap-hero">
-			<div class="flexslider">
-				<ul class="slides">
-			   	<li style="background-image: url(template/images/hall.jpg);" height= "100">
-			   		<div class="overlay-gradient"></div>
-			   		<div class="container-fluid">
-			   			<div class="row">
-				   			<div class="col-md-6 col-md-offset-3 slider-text">
-				   				<div class="slider-text-inner text-center">
-				   					<span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span>
-				   					<h1>Bus</h1>
-										
-				   				</div>
-				   			</div>
-				   		</div>
-			   		</div>
-			   	</li>
-			  	</ul>
-		  	</div>
-		</aside>
-<div class="pricing py-5">
-  <div class="container">
-    <div class="row">
-      <!-- Free Tier -->
-      <div class="col-lg-4">
-        <div class="card mb-5 mb-lg-0" >
-            <img class="card-img-top img-fluid" src="template/images/bus1.jpg" width="100%">
-          <div class="card-body">
-          
-            <h5 class="card-title text-muted text-uppercase text-center">Free</h5>
-            <h6 class="card-price text-center">$0<span class="period">/month</span></h6>
-            <hr>
-            <ul class="fa-ul">
-              <li><span class="fa-li"><i class="fas fa-check"></i></span>Single User</li>
-              <li><span class="fa-li"><i class="fas fa-check"></i></span>5GB Storage</li>
-              <li><span class="fa-li"><i class="fas fa-check"></i></span>Unlimited Public Projects</li>
-              <li><span class="fa-li"><i class="fas fa-check"></i></span>Community Access</li>
-              <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Unlimited Private Projects</li>
-              <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Dedicated Phone Support</li>
-              <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Free Subdomain</li>
-              <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Monthly Status Reports</li>
-            </ul>
-            <a href="#" class="btn btn-block btn-primary text-uppercase">View Detail</a>
-          </div>
-        </div>
-        
-      </div>
-      <!-- Plus Tier -->
-      <div class="col-lg-4">
-        <div class="card mb-5 mb-lg-0">
-            <img class="card-img-top img-fluid" src="template/images/bus1.jpg" width="100%">
-          <div class="card-body">
-            <h5 class="card-title text-muted text-uppercase text-center">Plus</h5>
-            <h6 class="card-price text-center">$9<span class="period">/month</span></h6>
-            <hr>
-            <ul class="fa-ul">
-              <li><span class="fa-li"><i class="fas fa-check"></i></span><strong>5 Users</strong></li>
-              <li><span class="fa-li"><i class="fas fa-check"></i></span>50GB Storage</li>
-              <li><span class="fa-li"><i class="fas fa-check"></i></span>Unlimited Public Projects</li>
-              <li><span class="fa-li"><i class="fas fa-check"></i></span>Community Access</li>
-              <li><span class="fa-li"><i class="fas fa-check"></i></span>Unlimited Private Projects</li>
-              <li><span class="fa-li"><i class="fas fa-check"></i></span>Dedicated Phone Support</li>
-              <li><span class="fa-li"><i class="fas fa-check"></i></span>Free Subdomain</li>
-              <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Monthly Status Reports</li>
-            </ul>
-            <a href="#" class="btn btn-block btn-primary text-uppercase">View Detail</a>
-          </div>
-        </div>
-      </div>
-      <!-- Pro Tier -->
-      <div class="col-lg-4">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title text-muted text-uppercase text-center">Pro</h5>
-            <h6 class="card-price text-center">$49<span class="period">/month</span></h6>
-            <hr>
-            <ul class="fa-ul">
-              <li><span class="fa-li"><i class="fas fa-check"></i></span><strong>Unlimited Users</strong></li>
-              <li><span class="fa-li"><i class="fas fa-check"></i></span>150GB Storage</li>
-              <li><span class="fa-li"><i class="fas fa-check"></i></span>Unlimited Public Projects</li>
-              <li><span class="fa-li"><i class="fas fa-check"></i></span>Community Access</li>
-              <li><span class="fa-li"><i class="fas fa-check"></i></span>Unlimited Private Projects</li>
-              <li><span class="fa-li"><i class="fas fa-check"></i></span>Dedicated Phone Support</li>
-              <li><span class="fa-li"><i class="fas fa-check"></i></span><strong>Unlimited</strong> Free Subdomains</li>
-              <li><span class="fa-li"><i class="fas fa-check"></i></span>Monthly Status Reports</li>
-            </ul>
-            <a href="#" class="btn btn-block btn-primary text-uppercase">View Detail</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-			
+
+
+
+<section class="pricing py-5">
+	<div class="container">
+		<div class="row">
+			<!-- Free Tier -->
+			<div class="col-lg-4">
+				<div class="card mb-5 mb-lg-0">
+					<div class="card-header">
+						<h2 class="text-center">Sight Seeing package</h2>
+					</div>
+					<div class="card-body">
+						<img src="template/images/bus1.jpg" alt="" class="card-img-top">
+						<h5 class="card-title text-muted text-uppercase text-center">Price</h5>
+						<h5 class="card-price text-center pb-4">MMK 113,409<span class="period">/person</span></h5>
+
+						<ul> 
+							<li>Full-day city sightseeing tour of Yangon</li>
+							<li>See the Yangon River, colonial buildings and Chauk Htat Gyi (reclining Buddha)</li>
+							<li>Hotel pickup and drop-off</li>
+							<li>Departure time: 8:00 AM</li>
+							<li>Arrival time: 4:00 PM</li>
+							<li>Transport by air-conditioned vehicle</li> 
+					</ul>
+					<a href="#" class="btn btn-block btn-primary text-uppercase">More Info</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-4">
+				<div class="card mb-5 mb-lg-0">
+					<div class="card-header">
+						<h2 class="text-center">Yangon Culture and Temples</h2>
+					</div>
+					<div class="card-body">
+						<img src="template/images/bus3.jpg" alt="" class="card-img-top">
+						<h5 class="card-title text-muted text-uppercase text-center">Price</h5>
+						<h5 class="card-price text-center pb-4">MMK 121,520<span class="period">/person</span></h5>
+
+						<ul> 
+							
+							<li>Visiting Shwegadon Pagoda, Sule Pagoda, Mahabandoola Park, Botataung Pagoda, and Chaukhtatgyi Temple</li>
+							<li>Hotel pickup and drop-off</li>
+							<li>Departure time: 8:00 AM</li>
+							<li>Arrival time: 4:00 PM</li>
+							<li>Transport by air-conditioned vehicle</li> 
+					</ul>
+					<a href="#" class="btn btn-block btn-primary text-uppercase">More Info</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-4">
+				<div class="card mb-5 mb-lg-0">
+					<div class="card-header">
+						<h2 class="text-center">Yangon Night Market Package</h2>
+					</div>
+					<div class="card-body">
+						<img src="template/images/bus2.jpg" alt="" class="card-img-top">
+						<h5 class="card-title text-muted text-uppercase text-center">Price</h5>
+						<h5 class="card-price text-center pb-4">MMK 49,216<span class="period">/person</span></h5>
+
+						<ul> 
+							<li>Snacks from the street market</li>
+							<li>Hotel pickup and drop-off</li>
+							<li>Departure time: 5:00 PM</li>
+							<li>Arrival time: 7:30 PM</li>
+							<li>Check out the bustling local night markets of Yangon with an experienced guide</li> 
+					</ul>
+					<a href="#" class="btn btn-block btn-primary text-uppercase">More Info</a>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</section>
+
 @endsection
