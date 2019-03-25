@@ -11,7 +11,7 @@
 				   			<div class="col-md-6 col-md-offset-3 slider-text">
 				   				<div class="slider-text-inner text-center">
 				   					<span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span>
-				   					<h1>Halls</h1>
+				   					<h1>Dinning</h1>
 										
 				   				</div>
 				   			</div>
