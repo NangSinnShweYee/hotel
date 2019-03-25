@@ -1,6 +1,5 @@
 @extends('frontend/master')
 @section('content')
-
 		<aside id="qbootstrap-hero">
 			<div class="flexslider">
 				<ul class="slides">
@@ -21,90 +20,79 @@
 			  	</ul>
 		  	</div>
 		</aside>
-<div id="qbootstrap-rooms">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-6 col-md-offset-3 text-center qbootstrap-heading animate-box">
-				<span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span>
-				<h2>Dining</h2>
-				<p>We love to tell our successful far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-6 room-wrap animate-box">
-				<a href="template/images/hall1.jpg" class="room image-popup-link" style="background-image: url(template/images/hall1.jpg);"></a>
-				<div class="desc">
-					<h3><a href="rooms-suites.html">Crystal Ballroom</a></h3>
-					<p class="price">
-						<span class="currency">$</span>
-						<span class="price-room">149</span>
-						<span class="per">/ per hour</span>
-					</p>
-					<ul>
-						<li><i class="icon-check"></i> 
-						Capacity 300</li>
-						<li><i class="icon-check"></i> Location 1F</li>
-						<li><i class="icon-check"></i>Surface area: 445 m<sup>2</sup></li>
-					</ul>
-					<p><a class="btn btn-primary">Book now!</a></p>
-				</div>
-			</div>
-			<div class="col-md-6 room-wrap animate-box">
-				<a href="template/images/hall2.jpg" class="room image-popup-link" style="background-image: url(template/images/hall2.jpg);"></a>
-				<div class="desc">
-					<h3><a href="rooms-suites.html">Grand Ballroom</a></h3>
-					<p class="price">
-						<span class="currency">$</span>
-						<span class="price-room">199</span>
-						<span class="per">/ per hour</span>
-					</p>
-					<ul>
-					<li><i class="icon-check"></i> 
-						Capacity 540</li>
-						<li><i class="icon-check"></i> Location 2F</li>
-						<li><i class="icon-check"></i>Surface area: 700 m<sup>2</sup></li>
-					</ul>
-					<p><a class="btn btn-primary">Book now!</a></p>
-				</div>
-			</div>
-			<div class="col-md-6 room-wrap animate-box">
-				<a href="template/images/hall3.jpg" class="room image-popup-link" style="background-image: url(template/images/hall3.jpg);"></a>
-				<div class="desc">
-					<h3><a href="rooms-suites.html">Meeting Room</a></h3>
-					<p class="price">
-						<span class="currency">$</span>
-						<span class="price-room">249</span>
-						<span class="per">/ per hour</span>
-					</p>
-					<ul>
-						
-						<li><i class="icon-check"></i>U Shaped: 30 capacity</li>
-						<li><i class="icon-check"></i>Theatre style: 90 capacity</li>
-						<li><i class="icon-check"></i>Surface area: 92 m<sup>2</sup></li>
-					</ul>
-					<p><a class="btn btn-primary">Book now!</a></p>
-				</div>
-			</div>
-			<div class="col-md-6 room-wrap animate-box">
-				<a href="template/images/hall4.jpg" class="room image-popup-link img-silder" style="background-image: url(template/images/hall4.jpg);"></a>
-				<div class="desc">
-					<h3><a href="rooms-suites.html">Banquet Hall Pushkin</a></h3>
-					<p class="price">
-						<span class="currency">$</span>
-						<span class="price-room">179</span>
-						<span class="per">/ per hour</span>
-					</p>
-					<ul>
-						<li><i class="icon-check"></i> 
-						Capacity 100</li>
-						<li><i class="icon-check"></i> Location 1F</li>
-						<li><i class="icon-check"></i>Surface area: 130 m<sup>2</sup></li>
-					</ul>
-					<p><a class="btn btn-primary">Book now!</a></p>
-				</div>
-			</div>
-
-		</div>
-	</div>
-	
-	@endsection
+<div class="pricing py-5">
+  <div class="container">
+    <div class="row">
+      <!-- Free Tier -->
+      <div class="col-lg-4">
+        <div class="card mb-5 mb-lg-0" >
+            <img class="card-img-top img-fluid" src="template/images/bus1.jpg" width="100%">
+          <div class="card-body">
+          
+            <h5 class="card-title text-muted text-uppercase text-center">Free</h5>
+            <h6 class="card-price text-center">$0<span class="period">/month</span></h6>
+            <hr>
+            <ul class="fa-ul">
+              <li><span class="fa-li"><i class="fas fa-check"></i></span>Single User</li>
+              <li><span class="fa-li"><i class="fas fa-check"></i></span>5GB Storage</li>
+              <li><span class="fa-li"><i class="fas fa-check"></i></span>Unlimited Public Projects</li>
+              <li><span class="fa-li"><i class="fas fa-check"></i></span>Community Access</li>
+              <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Unlimited Private Projects</li>
+              <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Dedicated Phone Support</li>
+              <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Free Subdomain</li>
+              <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Monthly Status Reports</li>
+            </ul>
+            <a href="#" class="btn btn-block btn-primary text-uppercase">View Detail</a>
+          </div>
+        </div>
+        
+      </div>
+      <!-- Plus Tier -->
+      <div class="col-lg-4">
+        <div class="card mb-5 mb-lg-0">
+            <img class="card-img-top img-fluid" src="template/images/bus1.jpg" width="100%">
+          <div class="card-body">
+            <h5 class="card-title text-muted text-uppercase text-center">Plus</h5>
+            <h6 class="card-price text-center">$9<span class="period">/month</span></h6>
+            <hr>
+            <ul class="fa-ul">
+              <li><span class="fa-li"><i class="fas fa-check"></i></span><strong>5 Users</strong></li>
+              <li><span class="fa-li"><i class="fas fa-check"></i></span>50GB Storage</li>
+              <li><span class="fa-li"><i class="fas fa-check"></i></span>Unlimited Public Projects</li>
+              <li><span class="fa-li"><i class="fas fa-check"></i></span>Community Access</li>
+              <li><span class="fa-li"><i class="fas fa-check"></i></span>Unlimited Private Projects</li>
+              <li><span class="fa-li"><i class="fas fa-check"></i></span>Dedicated Phone Support</li>
+              <li><span class="fa-li"><i class="fas fa-check"></i></span>Free Subdomain</li>
+              <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Monthly Status Reports</li>
+            </ul>
+            <a href="#" class="btn btn-block btn-primary text-uppercase">View Detail</a>
+          </div>
+        </div>
+      </div>
+      <!-- Pro Tier -->
+      <div class="col-lg-4">
+        <div class="card">
+          <div class="card-body">
+          	<img class="card-img-top img-fluid" src="template/images/bus1.jpg" width="100%">
+            <h5 class="card-title text-muted text-uppercase text-center">Pro</h5>
+            <h6 class="card-price text-center">$49<span class="period">/month</span></h6>
+            <hr>
+            <ul class="fa-ul">
+              <li><span class="fa-li"><i class="fas fa-check"></i></span><strong>Unlimited Users</strong></li>
+              <li><span class="fa-li"><i class="fas fa-check"></i></span>150GB Storage</li>
+              <li><span class="fa-li"><i class="fas fa-check"></i></span>Unlimited Public Projects</li>
+              <li><span class="fa-li"><i class="fas fa-check"></i></span>Community Access</li>
+              <li><span class="fa-li"><i class="fas fa-check"></i></span>Unlimited Private Projects</li>
+              <li><span class="fa-li"><i class="fas fa-check"></i></span>Dedicated Phone Support</li>
+              <li><span class="fa-li"><i class="fas fa-check"></i></span><strong>Unlimited</strong> Free Subdomains</li>
+              <li><span class="fa-li"><i class="fas fa-check"></i></span>Monthly Status Reports</li>
+            </ul>
+            <a href="#" class="btn btn-block btn-primary text-uppercase">View Detail</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+			
+@endsection
