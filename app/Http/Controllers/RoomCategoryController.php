@@ -16,6 +16,7 @@ class RoomCategoryController extends Controller
     {
         //  
         $roomcategories = RoomCategory::all();
+        
 
         
 

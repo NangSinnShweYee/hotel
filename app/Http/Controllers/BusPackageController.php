@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\BusPackage;
 
 class BusPackageController extends Controller
 {
@@ -10,10 +11,19 @@ class BusPackageController extends Controller
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
+
      */
+
+   /*  public function __construct()
+    {
+        $this->middleware('auth');
+
+    }*/
+
     public function index()
     {
-        //
+        $buspackages=BusPackage::all();
+        return view('backend/bus_packages.index',compact('buspackages'));
     }
 
     /**
@@ -23,7 +33,7 @@ class BusPackageController extends Controller
      */
     public function create()
     {
-        //
+        return view('backend/bus_packages.create');
     }
 
     /**
@@ -34,7 +44,27 @@ class BusPackageController extends Controller
      */
     public function store(Request $request)
     {
-        //
+         if($request->hasfile('photo')){
+            $photo=$request->file('photo');
+            $name=$photo->getClientOriginalName();
+            $photo->move(public_path().'/storage/image/',$name
+        );
+            $photo='storage/image/'.$name;
+        }else{
+            $photo=request('oldimage');
+        }
+
+        BusPackage::create([
+            "name"=>request('name'),
+            "price"=>request('price'),
+            "photo"=>$photo,
+            "depature_time"=>request('depature_time'),
+            "arrival_time"=>request('arrival_time'),
+            "places"=>request('places'),
+            "description"=>request('description'),
+            "guide"=>request('guide'),
+        ]);
+        return redirect('/bus_packages');
     }
 
     /**
