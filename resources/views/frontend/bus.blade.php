@@ -25,8 +25,10 @@
     <div class="row">
       <!-- Free Tier -->
       <div class="col-lg-4">
-        <div class="card mb-5 mb-lg-0">
+        <div class="card mb-5 mb-lg-0" >
+            <img class="card-img-top img-fluid" src="template/images/bus1.jpg" width="100%">
           <div class="card-body">
+          
             <h5 class="card-title text-muted text-uppercase text-center">Free</h5>
             <h6 class="card-price text-center">$0<span class="period">/month</span></h6>
             <hr>
@@ -43,10 +45,12 @@
             <a href="#" class="btn btn-block btn-primary text-uppercase">View Detail</a>
           </div>
         </div>
+        
       </div>
       <!-- Plus Tier -->
       <div class="col-lg-4">
         <div class="card mb-5 mb-lg-0">
+            <img class="card-img-top img-fluid" src="template/images/bus1.jpg" width="100%">
           <div class="card-body">
             <h5 class="card-title text-muted text-uppercase text-center">Plus</h5>
             <h6 class="card-price text-center">$9<span class="period">/month</span></h6>
