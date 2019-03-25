@@ -70,7 +70,8 @@ class HallController extends Controller
      */
     public function show($id)
     {
-        //
+       $halls = Hall::find($id);
+
     }
 
     /**
@@ -81,7 +82,8 @@ class HallController extends Controller
      */
     public function edit($id)
     {
-        //
+        $halls = Hall::find($id);
+        return view('backend/halls.edit',compact('halls'));
     }
 
     /**
@@ -93,7 +95,26 @@ class HallController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        if($request->hasfile('photo')){
+            $photo=$request->file('photo');
+            $name=$photo->getClientOriginalName();
+            $photo->move(public_path().'/storage/image/',$name
+        );
+            $photo='storage/image/'.$name;
+        }else{
+            $photo=request('oldimage');
+        }
+        $halls = Hall::find($id);
+
+        $halls->name=request('name');
+        $halls->price=request('price');
+        $halls->photo=$photo;
+        $halls->capacity=request('capacity');
+        $halls->location=request('location');
+        $halls->description=request('description');
+
+        $halls->save();
+        return redirect('/halls');
     }
 
     /**
@@ -104,6 +125,9 @@ class HallController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $halls = Hall::find($id);
+        $halls->delete();
+        return redirect('/halls');
+
     }
 }
