@@ -98,7 +98,7 @@
 				<div class="row">
 						@foreach ($rooms as $room)  
 					<div class="col-md-4 room-wrap animate-box">
-						<a href="#" class="room image-popup-link" style="background-image: url({{$room->photo}});"></a>
+						<a href="{{$room->photo}}" class="room image-popup-link" style="background-image: url({{$room->photo}});"></a>
 					
 						<div class="desc">
 						<h3><a href="#">{{$room->room_categories->name}}</a></h3>
