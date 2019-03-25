@@ -11,9 +11,9 @@
         {{ session()->get('success') }}  
       </div><br />
     @endif
-    <div class="container">
+    <div class="container-fluid">
     <a href="{{route('rooms.create')}}" class="btn btn-success" >Create</a>
-    <table class="table table-striped">
+    <table class="table table-striped table-responsive">
             <thead>
                     <tr>
                       <td>No.</td>
