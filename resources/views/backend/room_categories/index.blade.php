@@ -24,7 +24,7 @@
             </tr>
         </thead>
       <tbody>
-            @foreach($room_categories as $room_category)
+            @foreach($roomcategories as $room_category)
             <tr>
                 <td>{{$room_category->id}}</td>
                 <td>{{$room_category->name}}</td>

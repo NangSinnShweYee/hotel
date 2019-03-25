@@ -15,11 +15,11 @@ class RoomCategoryController extends Controller
     public function index()
     {
         //  
-        $room_categories = RoomCategory::all();
+        $roomcategories = RoomCategory::all();
 
         
 
-        return view('backend/room_categories.index', compact('room_categories'));
+        return view('backend/room_categories.index', compact('roomcategories'));
     }
 
     /**
@@ -44,7 +44,12 @@ class RoomCategoryController extends Controller
         RoomCategory::create([
            'name'=>request('roomcategory_name')
         ]);
-        return view('backend/room_categories.index');
+        
+       $roomcategories = RoomCategory::all();
+
+        
+
+        return view('backend/room_categories.index', compact('roomcategories'));
             
     }
 
