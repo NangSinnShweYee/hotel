@@ -20,6 +20,10 @@ class CreateRoomsTable extends Migration
             $table->text('description');
             $table->float('price');
             $table->boolean('availability')->default(1);
+            $table->boolean('wifi')->default(1);
+            $table->boolean('aircorn')->default(1);
+            $table->boolean('bathroom')->default(1);
+            $table->boolean('tv')->default(1);
             $table->integer('bedcount');
             $table->unsignedBigInteger('category_id');
             $table->foreign('category_id')->references('id')->on('room_categories');

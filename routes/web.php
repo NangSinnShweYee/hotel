@@ -35,6 +35,7 @@ Route::get('/admin', function () {
 Route::resource('room_categories', 'RoomCategoryController');
 Route::resource('rooms', 'RoomController');
 Route::resource('room_bookings', 'RoomBookingController');
+Route::resource('hall_bookings', 'HallBookingController');
 Route::resource('halls', 'HallController');
 Route::resource('bus_packages', 'BusPackageController');
 

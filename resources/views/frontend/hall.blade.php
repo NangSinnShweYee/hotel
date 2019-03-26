@@ -53,7 +53,7 @@
 						<li><i class="icon-check"></i>{{$hall->location}}</li>
 						<li><i class="icon-check"></i>{{$hall->description}}</li>
 					</ul>
-					<p><a class="btn btn-primary" href="">Book now!</a></p>
+					<p><a class="btn btn-success" href="{{route('halls.show',$hall->id)}}">Book now!</a></p>
 				</div>
 			</div>
 			@endforeach
