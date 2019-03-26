@@ -38,7 +38,7 @@ Route::resource('room_bookings', 'RoomBookingController');
 Route::resource('hall_bookings', 'HallBookingController');
 Route::resource('halls', 'HallController');
 Route::resource('bus_packages', 'BusPackageController');
-
+Route::resource('dinings', 'DiningController');
 
 
 
