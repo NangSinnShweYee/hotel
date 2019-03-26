@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Dining;
 
 class DiningController extends Controller
 {
@@ -13,7 +14,8 @@ class DiningController extends Controller
      */
     public function index()
     {
-        //
+        $dinings=Dining::all();
+        return view('backend/dinings.index',compact('dinings'));
         
     }
 
@@ -24,7 +26,7 @@ class DiningController extends Controller
      */
     public function create()
     {
-        //
+        return view('backend/dinings.create');
     }
 
     /**
@@ -35,7 +37,29 @@ class DiningController extends Controller
      */
     public function store(Request $request)
     {
-        //
+            if($request->hasfile('photo')){
+            $photo=$request->file('photo');
+            $name=$photo->getClientOriginalName();
+            $photo->move(public_path().'/storage/image/',$name
+        );
+            $photo='storage/image/'.$name;
+        }else{
+            $photo=request('oldimage');
+        }
+
+         Dining::create([
+           
+            "name" => request('name'),
+            "price"=>request('price'),
+            "photo" => $photo,
+            "capacity" => request('capacity'),
+            "location" => request('location'),
+            "description" => request('description'),
+           
+            
+
+        ]);
+        return redirect('/dinings');
     }
 
     /**
@@ -57,8 +81,10 @@ class DiningController extends Controller
      */
     public function edit($id)
     {
-        //
+          $dinings = Dining::find($id);
+        return view('backend/dinings.edit',compact('dinings'));
     }
+    
 
     /**
      * Update the specified resource in storage.
@@ -69,7 +95,26 @@ class DiningController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+          if($request->hasfile('photo')){
+            $photo=$request->file('photo');
+            $name=$photo->getClientOriginalName();
+            $photo->move(public_path().'/storage/image/',$name
+        );
+            $photo='storage/image/'.$name;
+        }else{
+            $photo=request('oldimage');
+        }
+        $dinings = Dining::find($id);
+
+        $dinings->name=request('name');
+        $dinings->price=request('price');
+        $dinings->photo=$photo;
+        $dinings->capacity=request('capacity');
+        $dinings->location=request('location');
+        $dinings->description=request('description');
+
+        $dinings->save();
+        return redirect('/dinings');
     }
 
     /**
@@ -80,6 +125,8 @@ class DiningController extends Controller
      */
     public function destroy($id)
     {
-        //
+          $dinings = Dining::find($id);
+        $dinings->delete();
+        return redirect('/dinings');
     }
 }
