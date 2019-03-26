@@ -26,7 +26,8 @@ class HallController extends Controller
      */
     public function create()
     {
-        //
+        return view('backend/halls.create');
+
     }
 
     /**
@@ -37,7 +38,29 @@ class HallController extends Controller
      */
     public function store(Request $request)
     {
-        //
+            if($request->hasfile('photo')){
+            $photo=$request->file('photo');
+            $name=$photo->getClientOriginalName();
+            $photo->move(public_path().'/storage/image/',$name
+        );
+            $photo='storage/image/'.$name;
+        }else{
+            $photo=request('oldimage');
+        }
+
+         Hall::create([
+           
+            "name" => request('name'),
+            "price"=>request('price'),
+            "photo" => $photo,
+            "capacity" => request('capacity'),
+            "location" => request('location'),
+            "description" => request('description'),
+           
+            
+
+        ]);
+        return redirect('/halls');
     }
 
     /**
