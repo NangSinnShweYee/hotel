@@ -52,7 +52,7 @@
 						<li><i class="icon-check"></i> Location 1F</li>
 						<li><i class="icon-check"></i>Surface area: 445 m<sup>2</sup></li>
 					</ul>
-					<p><a class="btn btn-primary text-white">Book now!</a></p>
+					<p><a class="btn btn-primary">Book now!</a></p>
 				</div>
 			</div>
 
@@ -74,7 +74,7 @@
 						<li><i class="icon-check"></i> Location 2F</li>
 						<li><i class="icon-check"></i>Surface area: 700 m<sup>2</sup></li>
 					</ul>
-					<p><a class="btn btn-primary text-white">Book now!</a></p>
+					<p><a class="btn btn-primary">Book now!</a></p>
 				</div>
 			</div>
 
@@ -103,7 +103,7 @@
 						<li><i class="icon-check"></i>Theatre style: 90 capacity</li>
 						<li><i class="icon-check"></i>Surface area: 92 m<sup>2</sup></li>
 					</ul>
-					<p><a class="btn btn-primary text-white">Book now!</a></p>
+					<p><a class="btn btn-primary">Book now!</a></p>
 				</div>
 			</div>
 		</div>
@@ -125,7 +125,7 @@
 						<li><i class="icon-check"></i> Location 1F</li>
 						<li><i class="icon-check"></i>Surface area: 130 m<sup>2</sup></li>
 					</ul>
-					<p><a class="btn btn-primary text-white">Book now!</a></p>
+					<p><a class="btn btn-primary">Book now!</a></p>
 				</div>
 
 

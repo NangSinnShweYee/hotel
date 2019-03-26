@@ -14,7 +14,7 @@ class MainController extends Controller
     }
     public function room()
     {
-        $rooms = Room::paginate(6);
+        $rooms = Room::paginate(4);
 
         if($category_id = request('category_id')){
             $rooms = Room::where ('category_id',$category_id)->get();
