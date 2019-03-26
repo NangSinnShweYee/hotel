@@ -26,13 +26,7 @@
 	
 		<div id="qbootstrap-rooms">
 			<div class="container">
-				<div class="row">
-					<div class="col-md-6 col-md-offset-3 text-center qbootstrap-heading animate-box">
-						<span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span>
-						<h2>Rooms &amp; Suites</h2>
-						<p>We love to tell our successful far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-					</div>
-				</div>
+				
 				<div class="row">
 						@foreach ($rooms as $room)  
 					<div class="col-md-4 room-wrap animate-box">
