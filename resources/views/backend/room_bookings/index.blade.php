@@ -17,8 +17,8 @@
       <thead>
             <tr>
               <td>No</td>
-              <td>Room id</td>
-              <td>User id</td>
+              <td>Room Number</td>
+              <td>User name</td>
               <td>Check in date</td>
               <td>Check out date</td>
               
@@ -30,8 +30,8 @@
             @foreach($room_bookings as $room_booking)
             <tr>
             <td>{{$i}}</td>
-                <td>{{$room_booking->room_id}}</td>
-                <td>{{$room_booking->user_id}}</td>
+                <td>{{$room_booking->rooms['room_number']}}</td>
+                <td>{{$room_booking->users['name']}}</td>
                 <td>{{$room_booking->check_in}}</td>
                 <td>{{$room_booking->check_out}}</td>               
                 
