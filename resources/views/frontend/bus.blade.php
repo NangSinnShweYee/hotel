@@ -25,7 +25,7 @@
 							<li>Arrival time: 4:00 PM</li>
 							<li>Transport by air-conditioned vehicle</li> 
 					</ul>
-					<a href="#" class="btn btn-block btn-primary text-uppercase">More Info</a>
+					<a href="" class="btn btn-block btn-primary text-uppercase">More Info</a>
 					</div>
 				</div>
 			</div>
