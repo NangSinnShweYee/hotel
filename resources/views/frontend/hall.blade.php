@@ -33,121 +33,35 @@
 
 
 		<div class="row">
+			@foreach ($halls as $hall)
 			<div class="col-md-6 room-wrap animate-box">
-				<a href="template/images/hall1.jpg" class="room image-popup-link" style="background-image: url(template/images/hall1.jpg);"></a>
+				<a href="{{$hall->photo}}" class="room image-popup-link" style="background-image: url({{$hall->photo}});"></a>
 			</div>
 
 			<div class="col-md-6 room-wrap animate-box">
 				
 				<div class="desc">
-					<h3><a href="rooms-suites.html">Crystal Ballroom</a></h3>
+					<h3><a href="">{{$hall->name}}</a></h3>
 					<p class="price">
 						<span class="currency">$</span>
-						<span class="price-room">149</span>
+						<span class="price-room">{{$hall->price}}</span>
 						<span class="per">/ per hour</span>
 					</p>
 					<ul>
 						<li><i class="icon-check"></i> 
-						Capacity 300</li>
-						<li><i class="icon-check"></i> Location 1F</li>
-						<li><i class="icon-check"></i>Surface area: 445 m<sup>2</sup></li>
+						{{$hall->capacity}}</li>
+						<li><i class="icon-check"></i>{{$hall->location}}</li>
+						<li><i class="icon-check"></i>{{$hall->description}}</li>
 					</ul>
-					<p><a class="btn btn-primary">Book now!</a></p>
+					<p><a class="btn btn-primary" href="">Book now!</a></p>
 				</div>
 			</div>
-
+			@endforeach
 		</div>
 
-		<div class="row">
-			
-			<div class="col-md-6 room-wrap animate-box">
-				<div class="desc">
-					<h3><a href="rooms-suites.html">Grand Ballroom</a></h3>
-					<p class="price">
-						<span class="currency">$</span>
-						<span class="price-room">199</span>
-						<span class="per">/ per hour</span>
-					</p>
-					<ul>
-						<li><i class="icon-check"></i> 
-						Capacity 540</li>
-						<li><i class="icon-check"></i> Location 2F</li>
-						<li><i class="icon-check"></i>Surface area: 700 m<sup>2</sup></li>
-					</ul>
-					<p><a class="btn btn-primary">Book now!</a></p>
-				</div>
-			</div>
-
-			<div class="col-md-6 room-wrap animate-box">
-				<a href="template/images/hall1.jpg" class="room image-popup-link" style="background-image: url(template/images/hall1.jpg);"></a>
-			</div>
-		</div>
-
-		<div class="row">
-			<div class="col-md-6 room-wrap animate-box">
-				<a href="template/images/hall2.jpg" class="room image-popup-link" style="background-image: url(template/images/hall2.jpg);"></a>
-				
-			</div>
-			<div class="col-md-6 room-wrap animate-box">
-
-				<div class="desc">
-					<h3><a href="rooms-suites.html">Meeting Room</a></h3>
-					<p class="price">
-						<span class="currency">$</span>
-						<span class="price-room">249</span>
-						<span class="per">/ per hour</span>
-					</p>
-					<ul>
-
-						<li><i class="icon-check"></i>U Shaped: 30 capacity</li>
-						<li><i class="icon-check"></i>Theatre style: 90 capacity</li>
-						<li><i class="icon-check"></i>Surface area: 92 m<sup>2</sup></li>
-					</ul>
-					<p><a class="btn btn-primary">Book now!</a></p>
-				</div>
-			</div>
-		</div>
 		
-
-		<div class="row">
-			<div class="col-md-6 room-wrap animate-box">
-
-				<div class="desc">
-					<h3><a href="rooms-suites.html">Banquet Hall Pushkin</a></h3>
-					<p class="price">
-						<span class="currency">$</span>
-						<span class="price-room">179</span>
-						<span class="per">/ per hour</span>
-					</p>
-					<ul>
-						<li><i class="icon-check"></i> 
-						Capacity 100</li>
-						<li><i class="icon-check"></i> Location 1F</li>
-						<li><i class="icon-check"></i>Surface area: 130 m<sup>2</sup></li>
-					</ul>
-					<p><a class="btn btn-primary">Book now!</a></p>
-				</div>
-
-
-			</div>
-			<div class="col-md-6 room-wrap animate-box">
-
-					<a href="template/images/hall4.jpg" class="room image-popup-link img-silder" style="background-image: url(template/images/hall4.jpg);"></a>
-					
-
-
-			</div>
-		</div>
-
 	</div>
 
-
-
-
 </div>
-
-
-
-
 
 @endsection

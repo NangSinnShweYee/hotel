@@ -72,6 +72,7 @@ class HallController extends Controller
     public function show($id)
     {
        $halls = Hall::find($id);
+        return view('frontend/halldetail',compact('halls'));
 
     }
 
