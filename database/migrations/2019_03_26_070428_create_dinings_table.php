@@ -16,7 +16,10 @@ class CreateDiningsTable extends Migration
         Schema::create('dinings', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
-            
+            $table->float('price');
+            $table->integer('capacity');
+            $table->text('description');
+            $table->string('photo');
             $table->timestamps();
         });
     }

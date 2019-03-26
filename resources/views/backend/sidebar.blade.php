@@ -43,6 +43,11 @@
                 <i class="fas fa-fw fa-tachometer-alt"></i>
                 <span>Bus Packages</span></a>
     </li>
+    <li class="nav-item">
+            <a class="nav-link" href="{{'/dinings'}}">
+                <i class="fas fa-fw fa-tachometer-alt"></i>
+                <span>Dinings</span></a>
+    </li>
 
  </ul>
  <!-- End of Sidebar -->
