@@ -67,6 +67,7 @@
                 <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
                 <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
             </div>
+        </div>
 
             <div class="form-group">
                 <label for="user_password" class="col-md-4 control-label">description</label>
