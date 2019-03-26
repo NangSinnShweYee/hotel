@@ -16,7 +16,7 @@ class CreateBusPackagesTable extends Migration
         Schema::create('bus_packages', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
-            $table->price('float');
+            $table->float('price');
             $table->time('depature_time');
             $table->time('arrival_time');
             $table->string('places');
