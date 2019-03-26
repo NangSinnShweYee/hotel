@@ -1,4 +1,3 @@
-
 @extends('backend/main')
 @section('content')
 <style>

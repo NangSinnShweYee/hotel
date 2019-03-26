@@ -38,6 +38,8 @@ Route::resource('room_categories', 'RoomCategoryController');
 Route::resource('rooms', 'RoomController');
 Route::resource('room_bookings', 'RoomBookingController');
 Route::resource('halls', 'HallController');
+Route::resource('bus_packages', 'BusPackageController');
+
 
 
 

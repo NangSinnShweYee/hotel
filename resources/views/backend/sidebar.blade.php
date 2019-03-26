@@ -38,6 +38,11 @@
              <i class="fas fa-fw fa-tachometer-alt"></i>
              <span>Halls</span></a>
      </li>
+     <li class="nav-item">
+            <a class="nav-link" href="{{'/bus_packages'}}">
+                <i class="fas fa-fw fa-tachometer-alt"></i>
+                <span>Bus Packages</span></a>
+    </li>
 
  </ul>
  <!-- End of Sidebar -->
