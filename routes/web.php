@@ -43,6 +43,7 @@ Route::resource('bus_packages', 'BusPackageController');
 
 
 
+
 //Route::get('/room','FrontendController@room');
 Auth::routes();
 
