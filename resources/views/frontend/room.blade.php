@@ -23,7 +23,7 @@
 		  	</div>
 		</aside>
 
-	v>
+	
 		<div id="qbootstrap-rooms">
 			<div class="container">
 				
