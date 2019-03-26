@@ -21,9 +21,7 @@ Route::get('/bus', function(){
 	return view('frontend/bus');
 });
 
-Route::get('/hall', function(){
-	return view('frontend/hall');
-});
+Route::get('/hall', 'MainController@hall');
 
 Route::get('/dining', function(){
 	return view('frontend/dining');
