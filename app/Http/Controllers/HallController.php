@@ -3,27 +3,20 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\RoomCategory;
-use App\Room;
+use App\Hall;
 
-class RoomController extends Controller
+class HallController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function __construct()
-    {
-        $this->middleware('auth');
-
-    }
     public function index()
     {
         //
-        $rooms = Room::all();
-        return view('backend/rooms.index',compact('rooms'));
-
+        $halls = Hall::all();
+        return view('backend/halls.index',compact('halls'));
     }
 
     /**
@@ -34,9 +27,6 @@ class RoomController extends Controller
     public function create()
     {
         //
-        $categories = RoomCategory::all();
-        return view('backend/rooms.create',compact('categories'));
-
     }
 
     /**
@@ -48,25 +38,6 @@ class RoomController extends Controller
     public function store(Request $request)
     {
         //
-        //Upload files
-        // if($request->hasFile('photo')){
-            $photo = $request->file('photo');
-            $name = $photo->getClientOriginalName();
-            $photo->move(public_path().'/storage/image/',$name);
-            $photo = '/storage/image/'.$name;
-        // }
-        Room::create([
-            "category_id" => request('category_id'),
-            "room_number" => request('room_number'),
-            "photo" => $photo,
-            "description" => request('description'),
-            "price" => request('price'),
-            "bedcount" => request('bedcount'),
-           
-            
-
-        ]);
-        return redirect('/rooms');
     }
 
     /**
@@ -78,8 +49,6 @@ class RoomController extends Controller
     public function show($id)
     {
         //
-        $rooms = Room::find($id);
-        return view('frontend/roomdetail',compact('rooms'));
     }
 
     /**

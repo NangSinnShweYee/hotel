@@ -1,9 +1,9 @@
 <footer id="qbootstrap-footer" role="contentinfo">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-4 qbootstrap-widget">
-						<h4>About</h4>
-						<p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit. Eos cumque dicta adipisci architecto culpa amet.</p>
+					<div class="col-md-6 qbootstrap-widget">
+						<h4>About Us</h4>
+						<p>Heaven, the largest hotel group in Korea, is expanding beyond Asia to become a global brand. We aim to be a brand that deeply moves the hearts of our guests with consistent quality of services and facilities in all Heaven chain hotels across the world.</p>
 						<p>
 							<small class="block">&copy; 2017 Free HTML5. All Rights Reserved.</small> 
 							<small class="block">Designed by <a href="https://qbootstrap.com/" target="_blank">QBootstrap.com</a> Demo Images: <a href="http://unsplash.co/" target="_blank">Unsplash</a></small>
@@ -17,25 +17,20 @@
 							</ul>
 						</p>
 					</div>
-					<div class="col-md-4 col-md-push-1">
-						<h4>Popular Posts</h4>
-						<ul class="qbootstrap-footer-links">
-							<li><a href="#">The Ultimate Packing List For Female Travelers</a></li>
-							<li><a href="#">How These 5 People Found The Path to Their Dream Trip</a></li>
-							<li><a href="#">A Definitive Guide to the Best Dining and Drinking Venues in the City</a></li>
-						</ul>
-					</div>
+					
+					
 
-					<div class="col-md-4 col-md-push-1">
+					<div class="col-md-6 col-md-push-1">
 						<h4>Contact Information</h4>
 						<ul class="qbootstrap-footer-links">
-							<li>291 South 21th Street, <br> Suite 721 New York NY 10016</li>
-							<li><a href="tel://1234567920">+ 1235 2355 98</a></li>
-							<li><a href="mailto:info@yoursite.com">info@yoursite.com</a></li>
-							<li><a href="http://qbootstrap.com">qbootstrap.com</a></li>
+							<li>No. 82, Sin Phyu Shin Avenue, Pyay Road, 6½ Mile, Ward 11, Hlaing Township, Yangon, Myanmar</li>
+							<li><a href="tel://1234567920">+959012345</a></li>
+							<li><a href="mailto:booking@heaven.com">booking@heaven.com</a></li>
+							<li><a href="http://heaven.com">heaven.com</a></li>
 						</ul>
 					</div>
 
 				</div>
+			</div>
 			</div>
 		</footer>

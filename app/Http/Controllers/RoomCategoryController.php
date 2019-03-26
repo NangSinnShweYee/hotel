@@ -15,11 +15,11 @@ class RoomCategoryController extends Controller
     public function index()
     {
         //  
-        $room_categories = RoomCategory::all();
+        $roomcategories = RoomCategory::all();
 
         
 
-        return view('backend/room_categories.index', compact('room_categories'));
+        return view('backend/room_categories.index', compact('roomcategories'));
     }
 
     /**
@@ -41,7 +41,16 @@ class RoomCategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        RoomCategory::create([
+           'name'=>request('roomcategory_name')
+        ]);
+
+       $roomcategories = RoomCategory::all();
+
+        
+
+        return view('backend/room_categories.index', compact('roomcategories'));
+            
     }
 
     /**
@@ -63,7 +72,8 @@ class RoomCategoryController extends Controller
      */
     public function edit($id)
     {
-        //
+        $room_categories = RoomCategory::find($id);
+        return view('backend.room_categories.edit',compact('room_categories'));
     }
 
     /**
@@ -75,7 +85,12 @@ class RoomCategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        /*dd($request);*/
+        //$room_categories = RoomCategory::all();
+        $room_category=RoomCategory::find($id);
+        $room_category->name=request('roomcategory_name');
+        $room_category->save();
+        return redirect('/room_categories');
     }
 
     /**
@@ -86,6 +101,11 @@ class RoomCategoryController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $room_category=RoomCategory::find($id);
+        foreach ($room_category->rooms as $room) {
+            $room->delete();
+        }
+        $room_category->delete();
+        return redirect('/room_categories');
     }
 }
