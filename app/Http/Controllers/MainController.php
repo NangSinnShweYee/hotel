@@ -48,7 +48,7 @@ class MainController extends Controller
     public function history()
     {
                     
-     $bookings = Room::where ('user_id',$user_id)->get();
+     $bookings = RoomBooking::where ('user_id',$user_id)->get();
         return view('frontend/history',compact('bookings'));
     }
     public function report(){
