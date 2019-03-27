@@ -53,7 +53,6 @@ class DiningController extends Controller
             "price"=>request('price'),
             "photo" => $photo,
             "capacity" => request('capacity'),
-            "location" => request('location'),
             "description" => request('description'),
            
             
