@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Room;
 use App\RoomCategory;
 use App\Hall;
+use App\RoomBooking;
 
 class MainController extends Controller
 {
@@ -38,5 +39,16 @@ class MainController extends Controller
                     
     
         return view('frontend/history');
+    }
+    public function report(){
+        // $room_categories = RoomCategory::all();
+        // foreach ($room_categories as $room_category) {
+        //     # code...
+        //     $count = App\RoomBooking::where('room_id', 2)->count();
+        // }
+        $count = RoomBooking::where('room_id', 2)->count();
+        echo $count;
+        // dd($count);
+        // return view ('backend/reports.index',compact('room_categories'));
     }
 }

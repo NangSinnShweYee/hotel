@@ -18,6 +18,14 @@
                         <th>Room type name</th>
                         <th>Number of time booked</th>
                     </tr>
+                    
+                        @foreach ($room_categories as $item)
+                        <tr>
+                            <td>1</td>
+                            <td>{{$item->name}}</td>
+                         </tr>
+                        @endforeach
+                    
                 </table>
             </div>
           </div>
