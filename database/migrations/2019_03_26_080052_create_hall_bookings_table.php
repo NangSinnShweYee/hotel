@@ -17,7 +17,7 @@ class CreateHallBookingsTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('hall_id');
             $table->unsignedBigInteger('user_id');
-            $table->datet('start_time');
+            $table->date('start_time');
             $table->date('end_time');           
             $table->foreign('hall_id')->references('id')->on('halls');
             $table->foreign('user_id')->references('id')->on('users');
