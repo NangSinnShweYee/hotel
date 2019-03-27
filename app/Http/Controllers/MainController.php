@@ -8,6 +8,7 @@ use App\RoomCategory;
 use App\Hall;
 use App\RoomBooking;
 use App\Dining;
+use App\BusPackage;
 use DB;
 
 
@@ -44,6 +45,14 @@ class MainController extends Controller
         $dinings = Dining::all();            
     
         return view('frontend/dining',compact('dinings'));
+    } 
+    public function bus()
+    {
+        $bus_packages = BusPackage::paginate(4);
+
+        $bus_packages = BusPackage::all();            
+    
+        return view('frontend/bus',compact('bus_packages'));
     } 
     public function history()
     {

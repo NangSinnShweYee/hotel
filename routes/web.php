@@ -18,9 +18,7 @@ Route::get('/', function () {
 
 Route::get('/room', 'MainController@room');
 Route::get('/history', 'MainController@history');
-Route::get('/bus', function(){
-	return view('frontend/bus');
-});
+Route::get('/bus', 'MainController@bus');
 
 Route::get('/hall', 'MainController@hall');
 Route::get('/dining', 'MainController@dining');
@@ -41,6 +39,7 @@ Route::resource('rooms', 'RoomController');
 Route::resource('room_bookings', 'RoomBookingController');
 Route::resource('hall_bookings', 'HallBookingController');
 Route::resource('dining_bookings', 'DiningBookingController');
+Route::resource('bus_bookings', 'BusBookingController');
 Route::resource('halls', 'HallController');
 Route::resource('bus_packages', 'BusPackageController');
 Route::resource('dinings', 'DiningController');
