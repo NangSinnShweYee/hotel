@@ -30,8 +30,8 @@
             @foreach($room_bookings as $room_booking)
             <tr>
             <td>{{$i}}</td>
-                <td>{{$room_booking->rooms['room_number']}}</td>
-                <td>{{$room_booking->users['name']}}</td>
+                <td>{{$room_booking->room->room_number}}</td>
+                <td>{{$room_booking->user->name}}</td>
                 <td>{{$room_booking->check_in}}</td>
                 <td>{{$room_booking->check_out}}</td>               
                 

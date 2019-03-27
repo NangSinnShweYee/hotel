@@ -9,6 +9,7 @@ use App\Hall;
 use App\RoomBooking;
 use App\Dining;
 use DB;
+use App\BusPackage;
 
 
 class MainController extends Controller
@@ -52,7 +53,11 @@ class MainController extends Controller
         return view('frontend/history',compact('bookings'));
     }
     public function report(){
-        $room_categories = RoomCategory::all();        
+        $room_categories = RoomCategory::all();
+        $bus_packages = BusPackage::all();
+        $halls= Hall::all();
+        $hall_array = array();
+        $bus_array = array();        
         $array = array();
         $roomsall = Room::all();
         $money = 0;
@@ -68,15 +73,22 @@ class MainController extends Controller
             
             array_push($array,$counts);
         }
-        
-        foreach ($room_bookings as $room_booking) {
+        foreach ($bus_packages as $cat) {
             # code...
-            echo "<br>";
-            echo $room_booking->rooms->id;
+            $counts = DB::table('hall_bookings')
+        ->join('rooms', 'rooms.id', '=', 'room_bookings.room_id')
+        ->join('room_categories', 'room_categories.id', '=', 'rooms.category_id')
+        ->where('room_categories.id', '=', $cat->id)
+        ->count();
             
+            array_push($array,$counts);
+        }
+        
+        foreach ($room_bookings as $room_booking) {            
+            $money += $room_booking->room->price;            
         }
 
         echo $money;
-        // return view('backend/reports.index',compact('room_categories','array'));
+        return view('backend/reports.index',compact('room_categories','array'));
     }
 }

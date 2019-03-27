@@ -103,9 +103,9 @@ class RoomCategoryController extends Controller
     public function destroy($id)
     {
         $room_category=RoomCategory::find($id);
-        foreach ($room_category->rooms as $room) {
-            $room->delete();
-        }
+        // foreach ($room_category->rooms as $room) {
+        //     $room->delete();
+        // }
         $room_category->delete();
         return redirect('/room_categories');
     }
