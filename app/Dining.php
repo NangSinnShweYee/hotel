@@ -11,8 +11,7 @@ class Dining extends Model
         'name',
         'price',
         'photo',
-        'capacity',
-        'location',
+        'capacity',     
         'description',        
 
     ];
