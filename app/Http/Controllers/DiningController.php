@@ -109,7 +109,7 @@ class DiningController extends Controller
         $dinings->price=request('price');
         $dinings->photo=$photo;
         $dinings->capacity=request('capacity');
-        $dinings->location=request('location');
+        
         $dinings->description=request('description');
 
         $dinings->save();
