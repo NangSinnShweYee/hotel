@@ -17,6 +17,7 @@ Route::get('/', function () {
 
 
 Route::get('/room', 'MainController@room');
+Route::get('/history', 'MainController@history');
 Route::get('/bus', function(){
 	return view('frontend/bus');
 });

@@ -42,13 +42,10 @@
                     @endif
                 </div>
                   <div class="form-group">                        
-                        <label for="name">Capacity </label>
+                        <label for="name">No of people </label>
                         <input type="number" class="form-control" name="capacity" />
                 </div>
-                  <div class="form-group">
-                          <label for="name">Location:</label>
-                    <input type="text" class="form-control" name="location" />
-                </div>
+                  
                 <div class="form-group">                        
                                <label for="user_password" class="col-md-4 control-label">description</label>
                     <textarea name="description" cols="30" rows="10"

@@ -30,10 +30,7 @@
 											{{-- <a class="dropdown-item" href="#">Profile</a>										 --}}
 					
 											{{-- <div class="dropdown-divider"></div> --}}
-											<a class="dropdown-item" style="padding: 0; margin-left:0px; color:black;" href="" onclick="event.preventDefault();
-												document.getElementById('').submit();">
-												{{ __('History') }}
-											</a>
+											
 											<a class="dropdown-item" style="padding: 0; margin-left:0px; color:black;" href="{{ route('logout') }}" onclick="event.preventDefault();
 																		 document.getElementById('logout-form').submit();">
 												{{ __('Logout') }}

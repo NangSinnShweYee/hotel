@@ -33,4 +33,10 @@ class MainController extends Controller
     
         return view('frontend/hall',compact('halls'));
     }
+    public function history()
+    {
+                    
+    
+        return view('frontend/history');
+    }
 }
