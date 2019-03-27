@@ -47,6 +47,10 @@ class RoomController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'photo' => 'required|',
+                       
+        ]);
         //
         //Upload files
         // if($request->hasFile('photo')){
