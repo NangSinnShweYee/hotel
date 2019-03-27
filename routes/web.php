@@ -29,9 +29,7 @@ Route::get('/dining', 'MainController@dining');
 
 Route::get('/reports', 'MainController@report');
 
-Route::get('/reports', function () {
-    return view('backend/reports/index');
-});
+
 
 
 Route::get('/admin', function () {

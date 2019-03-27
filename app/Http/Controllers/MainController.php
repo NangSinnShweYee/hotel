@@ -50,14 +50,14 @@ class MainController extends Controller
         return view('frontend/history',compact('bookings'));
     }
     public function report(){
-        // $room_categories = RoomCategory::all();
-        // foreach ($room_categories as $room_category) {
-        //     # code...
-        //     $count = App\RoomBooking::where('room_id', 2)->count();
-        // }
-        $count = RoomBooking::where('room_id', 2)->count();
-        echo $count;
+        $room_categories = RoomCategory::all();
+        foreach ($room_categories as $room_category) {
+            # code...
+            $count = RoomBooking::where('room_id', 2)->count();
+        }
+        // $count = RoomBooking::where('room_id', 2)->count();
+        // echo $count;
         // dd($count);
-        // return view ('backend/reports.index',compact('room_categories'));
+        return view ('backend/reports.index',compact('room_categories'));
     }
 }
