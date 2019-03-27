@@ -74,3 +74,4 @@
                 <!-- /.container-fluid -->
 
             </div>
+@include('backend/footer')
