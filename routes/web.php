@@ -27,9 +27,6 @@ Route::get('/dining', 'MainController@dining');
 
 
 
-Route::get('/dining', function(){
-	return view('frontend/dining');
-});
 Route::get('/reports', 'MainController@report');
 
 Route::get('/reports', function () {
