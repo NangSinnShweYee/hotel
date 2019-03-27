@@ -33,6 +33,7 @@
 						<p>We love to tell our successful far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
 					</div>
 				</div>
+				<div class="container">
 				<div class="row">
 						@foreach ($rooms as $room)  
 					<div class="col-md-4 room-wrap animate-box">
@@ -41,14 +42,35 @@
 						<div class="desc">
 						<h3><a href="#">{{$room->room_categories->name}}</a></h3>
 							<p class="price">
-								<span class="currency">$</span>
-							<span class="price-room">{{$room->price}}</span>
+								
+							<span class="price-room">${{$room->price}}</span>
 								<span class="per">/ per night</span>
 							</p>
 							<ul>
-								{{-- <li><i class="icon-check"></i> Only 10 rooms are available</li>
-								<li><i class="icon-check"></i> Breakfast included</li>
-								<li><i class="icon-check"></i> Price does not include VAT &amp; services fee</li> --}}
+							@if($room->aircorn=='1')
+								<li><i class="icon-check"></i>Aircorn Include</li>
+							@else
+								<li><i class="icon-check"></i>aircorn does not Include</li>
+							@endif
+
+							@if($room->wifi=='1')
+								<li><i class="icon-check"></i>Wifi Include</li>
+							@else
+								<li><i class="icon-check"></i>Wifi does not Include</li>
+							@endif
+
+							@if($room->bathroom=='1')
+								<li><i class="icon-check"></i>Bathroom Include</li>
+							@else
+								<li><i class="icon-check"></i>Bathroom does not Include</li>
+							@endif
+
+							@if($room->tv=='1')
+								<li><i class="icon-check"></i>TV Include</li>
+							@else
+								<li><i class="icon-check"></i>TV does not Include</li>
+							@endif
+
 							<p>{{$room->description}}</p>
 							</ul>
 							<p><a class="btn btn-success" href="{{route('rooms.show',$room->id)}}">Book now!</a></p>
@@ -59,5 +81,6 @@
 				</div>
 				{{ $rooms->links() }}
 			</div>
+		</div>
 		</div>
 @endsection
