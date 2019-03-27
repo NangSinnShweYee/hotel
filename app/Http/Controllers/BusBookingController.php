@@ -3,27 +3,19 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\BusPackage;
-
-class BusPackageController extends Controller
+use App\BusBooking;
+class BusBookingController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
-
      */
-
-   /*  public function __construct()
-    {
-        $this->middleware('auth');
-
-    }*/
-
     public function index()
     {
-        $buspackages=BusPackage::all();
-        return view('backend/bus_packages.index',compact('buspackages'));
+        //
+        $bus_bookings = BusBooking::all();
+        
     }
 
     /**
@@ -33,7 +25,7 @@ class BusPackageController extends Controller
      */
     public function create()
     {
-        return view('backend/bus_packages.create');
+        //
     }
 
     /**
@@ -44,27 +36,18 @@ class BusPackageController extends Controller
      */
     public function store(Request $request)
     {
-         if($request->hasfile('photo')){
-            $photo=$request->file('photo');
-            $name=$photo->getClientOriginalName();
-            $photo->move(public_path().'/storage/image/',$name
-        );
-            $photo='storage/image/'.$name;
-        }else{
-            $photo=request('oldimage');
-        }
-
-        BusPackage::create([
-            "name"=>request('name'),
-            "price"=>request('price'),
-            "photo"=>$photo,
-            "depature_time"=>request('depature_time'),
-            "arrival_time"=>request('arrival_time'),
-            "places"=>request('places'),
-            "description"=>request('description'),
-            "guide"=>request('guide'),
-        ]);
-        return redirect('/bus_packages');
+        // 
+        $bookings = BusBooking::where('bus_id','=', request('bus_id'))->get();      
+            BusBooking::create([
+                "bus_id" => request('bus_id'),
+                "user_id" => request('user_id'),
+                "date" => request('date'),
+                
+            ]);
+            return redirect('/')->with('success', 'Booking has been created');
+        
+        
+        
     }
 
     /**
@@ -75,8 +58,7 @@ class BusPackageController extends Controller
      */
     public function show($id)
     {
-         $bus_packages = BusPackage::find($id);
-        return view('frontend/busdetail',compact('bus_packages'));
+        //
     }
 
     /**
