@@ -41,17 +41,18 @@
 <script src=" {{asset('admintemplate/vendor/jquery/jquery.min.js')}}"></script>
 <script src="{{asset('admintemplate/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="{{asset('admintemplate/js/demo/datatables-demo.js')}}"></script>
 
 <!-- Core plugin JavaScript-->
 <script src="{{asset('admintemplate/vendor/jquery-easing/jquery.easing.min.js')}}"></script>
-
+<script src="{{asset('admintemplate/vendor/datatables/jquery.dataTables.min.js')}}"></script>
+<script src="{{asset('admintemplate/vendor/datatables/dataTables.bootstrap4.min.js')}}"></script>
 <!-- Custom scripts for all pages-->
 <script src="{{asset('admintemplate/js/sb-admin-2.min.js')}}"></script>
 <script type="text/javascript">
-  $('input[type="checkbox"]').on("click",function(){
-        let previousValue = $(this).attr("value") 
-        $(this).attr("value", previousValue == "0"? "1" : "0");
-    })
+  $(document).ready( function () {
+    $('#myTable').DataTable();
+} );
 </script>
 </body>
 

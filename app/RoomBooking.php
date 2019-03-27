@@ -16,12 +16,12 @@ class RoomBooking extends Model
     ];
     public function users()
     {
-        return $this->hasOne(User::class,'id');
+        return $this->hasMany(User::class,'id');
     }
 
     public function rooms()
     {
-        return $this->hasOne(Room::class,'id');
+        return $this->hasMany(Room::class,'id','room_id');
     }
 
 }

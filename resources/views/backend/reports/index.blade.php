@@ -12,12 +12,15 @@
       
           <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
             <div class="card-body">
-                <table class="table" >
-                    <tr>
-                        <th>No.</th>
-                        <th>Room type name</th>
-                        <th>Number of time booked</th>
-                    </tr>
+                <table class="table" id="myTable">
+                    <thead>
+                        <tr>
+                            <th>No.</th>
+                            <th>Room type name</th>
+                            <th>Number of time booked</th>
+                        </tr>
+                    </thead>
+                    <tbody>
                     @php
                        $i = 0 
                     @endphp
@@ -31,7 +34,7 @@
                              $i++;
                          @endphp
                         @endforeach
-                    
+                    </tbody>
                 </table>
             </div>
           </div>

@@ -54,7 +54,9 @@ class MainController extends Controller
     public function report(){
         $room_categories = RoomCategory::all();        
         $array = array();
-        
+        $roomsall = Room::all();
+        $money = 0;
+        $room_bookings = RoomBooking::all();
 
         foreach ($room_categories as $cat) {
             # code...
@@ -66,8 +68,15 @@ class MainController extends Controller
             
             array_push($array,$counts);
         }
-        // dd($array);
         
-        return view('backend/reports.index',compact('room_categories','array'));
+        foreach ($room_bookings as $room_booking) {
+            # code...
+            echo "<br>";
+            echo $room_booking->rooms->id;
+            
+        }
+
+        echo $money;
+        // return view('backend/reports.index',compact('room_categories','array'));
     }
 }
