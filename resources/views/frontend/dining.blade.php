@@ -3,10 +3,11 @@
 
 <section class="pricing py-5">
 	<div class="container">
-		@foreach ($dinings as $dining)
+		
 		<div class="row">
+			@foreach ($dinings as $dining)
 			<!-- Free Tier -->
-			<div class="col-lg-4 ">
+			<div class="col-md-4 ">
 				<div class="card mb-5 mb-lg-0">
 					
 					<div class="card-body">
@@ -27,5 +28,7 @@
 
 	</div>
 </section>
+
+
 
 @endsection
