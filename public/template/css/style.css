@@ -494,6 +494,7 @@ color: white;
   }
 }
 
+
 .qbootstrap-services {
   padding: 3em !important;
 }
@@ -721,11 +722,12 @@ color: white;
   text-decoration: none;
 }
 .item:hover .pop-up-overlay, .item:focus .pop-up-overlay {
-  opacity: 1;
+  opacity: 1
 }
 
 #qbootstrap-rooms .room-wrap {
   margin-bottom: 3em;
+  margin-top:0em;
 }
 #qbootstrap-rooms .room {
   background-size: cover;
@@ -771,12 +773,12 @@ color: white;
   position: absolute;
   top: 20%;
   left: 0;
-  font-size: 30px;
+  font-size: 20px;
 }
 #qbootstrap-rooms .desc .price .price-room {
-  font-size: 60px;
+  font-size: 40px;
   font-weight: 400;
-  padding-left: 15px;
+  
 }
 #qbootstrap-rooms .desc ul {
   margin: 0 0 40px 0;

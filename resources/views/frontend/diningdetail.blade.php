@@ -9,9 +9,9 @@
                 <div class="row">
                     <div class="col-md-12">
                         <article class="animate-box">
-                            <div class="blog-img">
-                                <img src="{{asset($dinings->photo)}}" class="img-fluid" width="800px" alt="">
-                            </div>
+                            
+                                <img src="{{asset($dinings->photo)}}" class="blog-img" width="800px" alt="">
+                            
                             <div class="desc">
 
                                 <h2>{{$dinings->name}}</h2>
@@ -30,6 +30,7 @@
                                    <i class="icon icon-calendar2"></i>
                                    <input type="hidden" name="dining_id" value="{{$dinings->id}}">
                                    <input type="hidden" name="user_id" value="{{Auth::user()->id}}">
+                                   
                                    <input type="date" id="date" name="date"
                                    class="form-control {{ $errors->has('date') ? ' is-invalid' : '' }}"
                                    placeholder="booking date">

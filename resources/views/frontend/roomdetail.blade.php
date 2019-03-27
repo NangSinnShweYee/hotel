@@ -27,6 +27,7 @@
                     <i class="icon icon-calendar2"></i>
                     <input type="hidden" name="room_id" value="{{$rooms->id}}">
                     <input type="hidden" name="user_id" value="{{Auth::user()->id}}">
+                    <label for="check_in">Check In</label>
                     <input type="date" id="date" name="check_in"
                         class="form-control {{ $errors->has('check_in') ? ' is-invalid' : '' }}"
                         placeholder="Check-in date">
@@ -40,6 +41,7 @@
             <div class="row">
                 <div class="col-md-3">
                     <i class="icon icon-calendar2"></i>
+                    <label for="check_out">Check Out</label>
                     <input type="date" id="date" name="check_out" class="form-control {{ $errors->has('check_out') ? ' is-invalid' : '' }}" placeholder="Check-out date">
                 @if ($errors->has('check_out'))
                 <span class="invalid-feedback" role="alert">
