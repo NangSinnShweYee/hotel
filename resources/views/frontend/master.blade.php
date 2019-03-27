@@ -116,8 +116,7 @@
 	<script src="{{asset('template/js/bootstrap-datepicker.js')}}"></script>
 	<!-- Main -->
 	<script src="{{asset('template/js/main.js')}}"></script>
-
-
+	
 </body>
 </html>
 
