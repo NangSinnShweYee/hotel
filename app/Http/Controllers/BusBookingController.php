@@ -37,9 +37,9 @@ class BusBookingController extends Controller
     public function store(Request $request)
     {
         // 
-        $bookings = BusBooking::where('bus_id','=', request('buspackages_id'))->get();      
+        $bookings = BusBooking::where('bus_id','=', request('bus_id'))->get();      
             BusBooking::create([
-                "bus_id" => request('buspackages_id'),
+                "bus_id" => request('bus_id'),
                 "user_id" => request('user_id'),
                 "date" => request('date'),
                 

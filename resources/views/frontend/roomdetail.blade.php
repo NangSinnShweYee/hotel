@@ -6,7 +6,7 @@
 
 <section class="py-5 bg-mylight" style="margin-top:18px;">
     <div class="container">
-        <img src="{{asset($rooms->photo)}}" class="img-fluid" width="700px" alt="">
+        <img src="{{asset($rooms->photo)}}" class="img-fluid" width="500px" alt="">
         <h1>{{$rooms->room_categories->name}}</h1>
         <h3>{{$rooms->description}}</h3>
         <p class="price" style="color:black">            
@@ -14,6 +14,33 @@
             <span class="price-room">{{$rooms->price}}</span>
             <span class="per">/ per night</span>
         </p>
+        <ul>
+                            @if($rooms->aircorn=='1')
+                                <li><i class="icon-check"></i>Aircorn Include</li>
+                            @else
+                                <li><i class="icon-check"></i>aircorn does not Include</li>
+                            @endif
+
+                            @if($rooms->wifi=='1')
+                                <li><i class="icon-check"></i>Wifi Include</li>
+                            @else
+                                <li><i class="icon-check"></i>Wifi does not Include</li>
+                            @endif
+
+                            @if($rooms->bathroom=='1')
+                                <li><i class="icon-check"></i>Bathroom Include</li>
+                            @else
+                                <li><i class="icon-check"></i>Bathroom does not Include</li>
+                            @endif
+
+                            @if($rooms->tv=='1')
+                                <li><i class="icon-check"></i>TV Include</li>
+                            @else
+                                <li><i class="icon-check"></i>TV does not Include</li>
+                            @endif
+
+                            <p>{{$rooms->description}}</p>
+                            </ul>
         @if(session()->get('overlap'))    
             <div class="alert alert-danger">
             {{ session()->get('overlap') }}  
@@ -50,7 +77,7 @@
                 @endif
                 </div>
             </div>
-            <input type="submit" name="submit" id="submit" value="Book" class="btn btn-primary">
+            <input type="submit" name="submit" id="submit" value="Book" class="btn btn-primary my-5">
             @csrf
         </form>
     </div>
