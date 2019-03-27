@@ -64,6 +64,10 @@ class RoomController extends Controller
             "room_number" => request('room_number'),
             "photo" => $photo,
             "description" => request('description'),
+            "wifi" => request('wifi'),
+            "aircorn" => request('aircorn'),
+            "bathroom" => request('bathroom'),
+            "tv" =>request('tv'),
             "price" => request('price'),
             "bedcount" => request('bedcount'),
            

@@ -13,6 +13,10 @@ class Room extends Model
         'description',
         'price',
         'availability',
+        'wifi',
+        'aircorn',
+        'bathroom',
+        'tv',
         'bedcount',
         'category_id',
 
