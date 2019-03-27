@@ -10,7 +10,7 @@ use App\RoomBooking;
 use App\Dining;
 use App\BusPackage;
 use DB;
-use App\BusPackage;
+
 
 
 class MainController extends Controller
