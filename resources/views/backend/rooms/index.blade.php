@@ -20,6 +20,10 @@
                       <td>Room Number</td>
                       <td>Photo</td>
                       <td>Description</td>
+                      <td>Wifi</td>
+                      <td>Air-corn</td>
+                      <td>Bathroom</td>
+                      <td>TV</td>
                       <td>Price</td>
                       <td>Availability</td>
                       <td>Bedcount</td>
@@ -36,6 +40,10 @@
                 <td>{{$room->room_number}}</td>
                 <td><img src="{{$room->photo}}" alt="" width="200px"></td>
                 <td>{{$room->description}}</td>
+                <td>{{$room->wifi}}</td>
+                <td>{{$room->aircorn}}</td>
+                <td>{{$room->bathroom}}</td>
+                <td>{{$room->tv}}</td>
                 <td>{{$room->price}}</td>
                 <td>{{$room->Availability}}</td>
                 <td>{{$room->bedcount}}</td>

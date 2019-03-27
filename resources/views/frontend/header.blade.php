@@ -27,7 +27,7 @@
 										<a href="#" class="dropdown-toggle" id="navbarDropdown" role="" data-toggle="dropdown" style="cursor:pointer;">{{Auth::user()->name}}</a>
 											<div class="dropdown-menu" aria-labelledby="navbarDropdown">										
 					
-											{{-- <a class="dropdown-item" href="#">Profile</a>										 --}}
+											
 					
 											{{-- <div class="dropdown-divider"></div> --}}
 											

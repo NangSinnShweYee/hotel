@@ -70,6 +70,8 @@ class DiningController extends Controller
     public function show($id)
     {
         //
+         $dinings = Dining::find($id);
+        return view('frontend/diningdetail',compact('dinings'));
     }
 
     /**

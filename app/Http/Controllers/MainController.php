@@ -7,6 +7,7 @@ use App\Room;
 use App\RoomCategory;
 use App\Hall;
 use App\RoomBooking;
+use App\Dining;
 
 class MainController extends Controller
 {
@@ -34,11 +35,19 @@ class MainController extends Controller
     
         return view('frontend/hall',compact('halls'));
     }
+   public function dining()
+    {
+        $dinings = Dining::paginate(4);
+
+        $dinings = Dining::all();            
+    
+        return view('frontend/dining',compact('dinings'));
+    } 
     public function history()
     {
                     
-    
-        return view('frontend/history');
+     $bookings = Room::where ('user_id',$user_id)->get();
+        return view('frontend/history',compact('bookings'));
     }
     public function report(){
         // $room_categories = RoomCategory::all();

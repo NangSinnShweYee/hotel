@@ -3,27 +3,20 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\RoomCategory;
-use App\Room;
+use App\DiningBooking;
 
-class RoomController extends Controller
+class DiningBookingController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function __construct()
-    {
-        $this->middleware('auth');
-
-    }
     public function index()
     {
         //
-        $rooms = Room::all();
-        return view('backend/rooms.index',compact('rooms'));
-
+        $dining_bookings = DiningBooking::all();
+        return view('backend/dining_bookings.index',compact('dining_bookings'));
     }
 
     /**
@@ -34,9 +27,6 @@ class RoomController extends Controller
     public function create()
     {
         //
-        $categories = RoomCategory::all();
-        return view('backend/rooms.create',compact('categories'));
-
     }
 
     /**
@@ -47,34 +37,25 @@ class RoomController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'photo' => 'required|',
-                       
-        ]);
         //
-        //Upload files
-        // if($request->hasFile('photo')){
-            $photo = $request->file('photo');
-            $name = $photo->getClientOriginalName();
-            $photo->move(public_path().'/storage/image/',$name);
-            $photo = '/storage/image/'.$name;
-        // }
-        Room::create([
-            "category_id" => request('category_id'),
-            "room_number" => request('room_number'),
-            "photo" => $photo,
-            "description" => request('description'),
-            "wifi" => request('wifi'),
-            "aircorn" => request('aircorn'),
-            "bathroom" => request('bathroom'),
-            "tv" =>request('tv'),
-            "price" => request('price'),
-            "bedcount" => request('bedcount'),
-           
-            
-
+        $request->validate([
+            'date' => 'required|min:10'
+                        
         ]);
-        return redirect('/rooms');
+        
+        $bookings = DiningBooking::where('dining_id','=', request('dining_id'))->get();
+
+        
+        
+        
+         DiningBooking::create([
+                "dining_id" => request('dining_id'),
+                "user_id" => request('user_id'),
+                "date" => request('date')
+                  
+    
+            ]);
+            return redirect('/')->with('success', 'Booking has been created');
     }
 
     /**
@@ -86,8 +67,6 @@ class RoomController extends Controller
     public function show($id)
     {
         //
-        $rooms = Room::find($id);
-        return view('frontend/roomdetail',compact('rooms'));
     }
 
     /**

@@ -57,6 +57,34 @@
                     </span>
                     @endif
                 </div>
+
+                <div class="row">
+                <div class="form-group">  
+                @csrf                      
+                       <label for="wifi">Wifi</label>
+                        <input type="checkbox" name="wifi" value="0" >
+                </div>
+
+                <div class="form-group">  
+                @csrf                      
+                       <label for="aircorn">Air-Corn</label>
+                        <input type="checkbox" name="aircorn" value="0" >
+                </div>
+
+                <div class="form-group">  
+                @csrf                      
+                       <label for="bathroom">Bathroom</label>
+                        <input type="checkbox" name="bathroom" value="0" >
+                </div>
+
+                <div class="form-group">  
+                @csrf                      
+                       <label for="tv">TV</label>
+                        <input type="checkbox" name="tv" value="0" >
+                </div>
+
+            </div>
+
                 <div class="form-group">                        
                         <label for="name">Price </label>
                         <input type="number" class="form-control" name="price" />

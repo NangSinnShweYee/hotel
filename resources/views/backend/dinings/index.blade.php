@@ -21,7 +21,7 @@
                       <td>Price</td>
                       <td>Photo</td>
                       <td>Capacity</td>
-                      
+
                       <td>Description</td>
                     
                       
@@ -37,7 +37,7 @@
                 <td>{{$dining->price}}</td>
                 <td><img src="{{$dining->photo}}" alt="" width="200px"></td>
                 <td>{{$dining->capacity}}</td>
-                
+                <td>{{$dining->location}}</td>
                 <td>{{$dining->description}}</td>
                
                 
