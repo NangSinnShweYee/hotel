@@ -8,6 +8,8 @@ use App\RoomCategory;
 use App\Hall;
 use App\RoomBooking;
 use App\Dining;
+use DB;
+
 
 class MainController extends Controller
 {
@@ -50,14 +52,22 @@ class MainController extends Controller
         return view('frontend/history',compact('bookings'));
     }
     public function report(){
-        $room_categories = RoomCategory::all();
-        foreach ($room_categories as $room_category) {
+        $room_categories = RoomCategory::all();        
+        $array = array();
+        
+
+        foreach ($room_categories as $cat) {
             # code...
-            $count = RoomBooking::where('room_id', 2)->count();
+            $counts = DB::table('room_bookings')
+        ->join('rooms', 'rooms.id', '=', 'room_bookings.room_id')
+        ->join('room_categories', 'room_categories.id', '=', 'rooms.category_id')
+        ->where('room_categories.id', '=', $cat->id)
+        ->count();
+            
+            array_push($array,$counts);
         }
-        // $count = RoomBooking::where('room_id', 2)->count();
-        // echo $count;
-        // dd($count);
-        return view ('backend/reports.index',compact('room_categories'));
+        // dd($array);
+        
+        return view('backend/reports.index',compact('room_categories','array'));
     }
 }

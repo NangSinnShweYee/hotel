@@ -12,18 +12,24 @@
       
           <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
             <div class="card-body">
-                <table class="table">
+                <table class="table" >
                     <tr>
                         <th>No.</th>
                         <th>Room type name</th>
                         <th>Number of time booked</th>
                     </tr>
-                    
-                        @foreach ($room_categories as $item)
+                    @php
+                       $i = 0 
+                    @endphp
+                        @foreach ($room_categories as $category)
                         <tr>
-                            <td>1</td>
-                            <td>{{$item->name}}</td>
+                            <td>{{$i+1}}</td>
+                            <td>{{$category->name}}</td>
+                            <td>{{$array[$i]}}</td>
                          </tr>
+                         @php
+                             $i++;
+                         @endphp
                         @endforeach
                     
                 </table>
