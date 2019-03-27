@@ -47,7 +47,12 @@
 
 <!-- Custom scripts for all pages-->
 <script src="{{asset('admintemplate/js/sb-admin-2.min.js')}}"></script>
-
+<script type="text/javascript">
+  $('input[type="checkbox"]').on("click",function(){
+        let previousValue = $(this).attr("value") 
+        $(this).attr("value", previousValue == "0"? "1" : "0");
+    })
+</script>
 </body>
 
 </html>
