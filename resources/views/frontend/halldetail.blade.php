@@ -27,12 +27,13 @@
                     <i class="icon icon-calendar2"></i>
                     <input type="hidden" name="hall_id" value="{{$halls->id}}">
                     <input type="hidden" name="user_id" value="{{Auth::user()->id}}">
-                    <input type="date" id="date" name="check_in"
-                        class="form-control {{ $errors->has('check_in') ? ' is-invalid' : '' }}"
-                        placeholder="Check-in date">
-                    @if ($errors->has('check_in'))
+                    @csrf
+                      <label for="name">Start Time:</label>
+                      <input type="time" class="form-control" 
+                      name="start_time"/>
+                    @if ($errors->has('start_time'))
                     <span class="invalid-feedback" role="alert">
-                        <strong>{{ $errors->first('check_in') }}</strong>
+                        <strong>{{ $errors->first('start_time') }}</strong>
                     </span>
                     @endif
                 </div>
@@ -40,10 +41,12 @@
             <div class="row">
                 <div class="col-md-3">
                     <i class="icon icon-calendar2"></i>
-                    <input type="date" id="date" name="check_out" class="form-control {{ $errors->has('check_out') ? ' is-invalid' : '' }}" placeholder="Check-out date">
-                @if ($errors->has('check_out'))
+                    <label for="name">End Time:</label>
+                      <input type="time" class="form-control" 
+                      name="end_time"/>
+                    @if ($errors->has('end_time'))
                 <span class="invalid-feedback" role="alert">
-                    <strong>{{ $errors->first('check_out') }}</strong>
+                    <strong>{{ $errors->first('end_time') }}</strong>
                 </span>
                 @endif
                 </div>
