@@ -57,34 +57,34 @@
                     <span class="price-room">{{$rooms->price}}</span>
                     <span class="per">/ per night</span>
                 </p>
-                <ul>
-                    @if($rooms->aircorn=='1')
-                    <li><i class="icon-check"></i>Aircorn Include</li>
-                    @else
-                    <li><i class="icon-check"></i>aircorn does not Include</li>
-                    @endif
+                <ul class="list-unstyled">
+                            @if($rooms->aircorn=='1')
+                                <li><i class="fas fa-snowflake text-dark"></i>Air-con</li>
+                            @else
+                                <li><i class="fas fa-times text-dark"></i>Air-con</li>
+                            @endif
 
-                    @if($rooms->wifi=='1')
-                    <li><i class="icon-check"></i>Wifi Include</li>
-                    @else
-                    <li><i class="icon-check"></i>Wifi does not Include</li>
-                    @endif
+                            @if($rooms->wifi=='1')
+                                <li><i class="fas fa-wifi text-dark"></i>Wifi</li>
+                            @else
+                                <li><i class="fas fa-times text-dark"></i>Wifi</li>
+                            @endif
 
-                    @if($rooms->bathroom=='1')
-                    <li><i class="icon-check"></i>Bathroom Include</li>
-                    @else
-                    <li><i class="icon-check"></i>Bathroom does not Include</li>
-                    @endif
+                            @if($rooms->bathroom=='1')
+                                <li><i class="fas fa-bath text-dark"></i>Bathroom</li>
+                            @else
+                                <li><i class="fas fa-times text-dark"></i>Bathroom</li>
+                            @endif
 
-                    @if($rooms->tv=='1')
-                    <li><i class="icon-check"></i>TV Include</li>
-                    @else
-                    <li><i class="icon-check"></i>TV does not Include</li>
-                    @endif
+                            @if($rooms->tv=='1')
+                                <li><i class="fas fa-tv text-dark"></i>TV</li>
+                            @else
+                                <li><i class="fas fa-times text-dark"></i>TV</li>
+                            @endif
 
-                    <p>{{$rooms->description}}</p>
-                </ul>
-                @if(session()->get('overlap'))
+                            <p>{{$rooms->description}}</p>
+                        </ul>
+                @if(session()->get('overlap'))    
                 <div class="alert alert-danger">
                     {{ session()->get('overlap') }}
                 </div><br />

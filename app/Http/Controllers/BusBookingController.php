@@ -92,6 +92,8 @@ class BusBookingController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $bus_bookings =BusBooking::find($id);
+        $bus_bookings->delete();
+        return redirect('/history');
     }
 }

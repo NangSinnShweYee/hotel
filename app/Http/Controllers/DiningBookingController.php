@@ -100,6 +100,9 @@ class DiningBookingController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $dining_bookings = DiningBooking::find($id);
+        $dining_bookings->delete();
+        return redirect('/history');
+
     }
 }

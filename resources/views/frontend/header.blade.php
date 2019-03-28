@@ -15,10 +15,12 @@
 		                        <li><a href="{{'/hall'}}">Hall</a></li>
 		                        <li><a href="{{'/bus'}}">Bus</a></li>
 		                        <li><a href="{{'/dining'}}">Dining</a></li>
+
 		                        
 		                        @guest
 								<li><a href="{{route('login')}}">Login</a></li>
 		                        <li><a href="{{route('register')}}">Register</a></li>
+
 		                        
 								@else
 								
@@ -40,9 +42,10 @@
 											<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
 												@csrf
 											</form>
+											<a href="{{'/history'}}">History</a>
 
 											
-											<a href="">History</a>
+											
 										</div>
 									</li>
 		                        @endguest

@@ -8,18 +8,18 @@ class HallBooking extends Model
 {
     //
      protected $fillable = [
-    'bus_id',
+        'hall_id',
         'user_id',
         'start_time',
         'end_time',
  ];
-public function users()
+public function user()
     {
-        return $this->hasOne(User::class,'id');
+        return $this->hasOne(User::class,'id','user_id');
     }
 
-    public function halls()
+    public function hall()
     {
-        return $this->hasOne(Hall::class,'id');
+        return $this->hasOne(Hall::class,'id','hall_id');
     }
 }
