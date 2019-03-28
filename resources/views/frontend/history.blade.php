@@ -8,6 +8,7 @@
 			<div>U haven't booked any room.</div>
 		@else
 		<table class="table table-striped">
+
 				<thead>
 					<tr>
 						<td>No</td>
@@ -117,13 +118,8 @@
                 <?php $i++; ?>
                 @endforeach
             </tbody>
-		</table>
-		@endif
-        <hr>
-		<h1>Dining Booking</h1>
-		@if (sizeof($busbookings)==0)
-			<div>U haven't booked any dining.</div>
-		@else
+        </table>
+        <h1>Dining Booking</h1>
         <table class="table table-striped">
 
             <thead>
@@ -154,8 +150,7 @@
                 <?php $i++; ?>
                 @endforeach
             </tbody>
-		</table>
-		@endif
+        </table>
 
 
 </section>

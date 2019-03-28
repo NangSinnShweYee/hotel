@@ -18,12 +18,16 @@
 						<h5 class="card-title text-muted text-uppercase text-center">Price</h5>
 						<h5 class="card-price text-center pb-4">{{$bus->price}}<span class="period">/person</span></h5>
 
-						<ul> 
+						<ul class="list-unstyled">
 							<li>{{$bus->places}}</li>
 							<li>{{$bus->description}}</li>
 							<li>{{$bus->depature_time}}</li>
 							<li>{{$bus->arrival_time}}</li>
-							<li>{{$bus->guide}}</li> 
+							@if($bus->guide=='1')
+								<li><i class="far fa-flag text-dark"></i>Guide</li>
+							@else
+								<li><i class="fas fa-times text-dark"></i>Guide</li>
+							@endif
 					</ul>
 					<a href="{{route('bus_packages.show',$bus->id)}}" class="btn btn-block btn-primary text-uppercase">More Info</a>
 					</div>

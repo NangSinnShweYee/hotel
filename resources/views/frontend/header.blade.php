@@ -42,7 +42,7 @@
 											<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
 												@csrf
 											</form>
-											<a href="{{'/history'}}">History</a>
+											<a  class="dropdown-item" style="padding: 0; margin-left:0px; color:black;" href="{{'/history'}}">History</a>
 
 											
 											

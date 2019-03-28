@@ -105,10 +105,13 @@
 	<!-- jQuery Easing -->
 	<script src="{{asset('template/js/jquery.easing.1.3.js')}}"></script>
 	<!-- Bootstrap -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
 	<script src="{{asset('template/js/bootstrap.min.js')}}"></script>
 	<!-- Waypoints -->
 	<script src="{{asset('template/js/jquery.waypoints.min.js')}}"></script>
 	<!-- Flexslider -->
+
 	<script src="{{asset('template/js/jquery.flexslider-min.js')}}"></script>
 	<!-- Owl carousel -->
 	<script src="{{asset('template/js/owl.carousel.min.js')}}"></script>
