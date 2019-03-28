@@ -68,7 +68,7 @@
 
                 </div>
                   <div class="form-group">                        
-                        <label for="name">Capacity </label>
+                        <label for="name">No of people </label>
                         <input type="number" class="form-control" name="capacity" value="{{$dinings->capacity}}" />
                 </div>
                   <div class="form-group">
