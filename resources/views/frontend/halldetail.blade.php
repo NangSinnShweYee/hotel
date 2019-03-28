@@ -6,7 +6,12 @@
 
 <section class="py-5 bg-mylight" style="margin-top:18px;">
     <div class="container">
+        <div class="col-md-6">
         <img src="{{asset($halls->photo)}}" class="img-fluid" width="700px" alt="">
+            </div>
+        <div class="col-md-6">
+
+              <div class="desc">
         <h1>{{$halls->name}}</h1>
         <h3>{{$halls->description}}</h3>
         <p class="price" style="color:black">            
@@ -39,7 +44,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-3">
+                <div class="col-md-6">
                     <i class="icon icon-calendar2"></i>
                     <label for="name">End Time:</label>
                       <input type="datetime-local" class="form-control" 
@@ -51,10 +56,12 @@
                 @endif
                 </div>
             </div>
+
             <input type="submit" name="submit" id="submit" value="Book" class="btn btn-primary">
             
         </form>
     </div>
+</div>
 
 </section>
 
