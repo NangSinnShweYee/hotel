@@ -84,9 +84,15 @@ class HallBookingController extends Controller
                 "end_time" => request('end_time'),   
     
             ]);
-            
-            //echo ($hall_id);
-             //return redirect('/')->with('success', 'Booking has been created');
+             /*$hall_id=request('hall_id');
+             echo ($hall_id);
+             $user_id=request('user_id');
+             echo ($user_id);
+             $start_time=request('start_time');
+             echo ($start_time);
+             $end_time=request('end_time');
+             echo ($end_time);*/
+             return redirect('/')->with('success', 'Booking has been created');
         }
         
         
