@@ -14,14 +14,14 @@ class RoomBooking extends Model
         'check_out',        
 
     ];
-    public function users()
+    public function user()
     {
-        return $this->hasOne(User::class,'id');
+        return $this->belongsTo(User::class);
     }
 
-    public function rooms()
+    public function room()
     {
-        return $this->hasOne(Room::class,'id');
+        return $this->hasOne(Room::class,'id','room_id');
     }
 
 }

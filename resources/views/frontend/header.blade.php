@@ -27,13 +27,10 @@
 										<a href="#" class="dropdown-toggle" id="navbarDropdown" role="" data-toggle="dropdown" style="cursor:pointer;">{{Auth::user()->name}}</a>
 											<div class="dropdown-menu" aria-labelledby="navbarDropdown">										
 					
-											{{-- <a class="dropdown-item" href="#">Profile</a>										 --}}
+											
 					
 											{{-- <div class="dropdown-divider"></div> --}}
-											<a class="dropdown-item" style="padding: 0; margin-left:0px; color:black;" href="" onclick="event.preventDefault();
-												document.getElementById('').submit();">
-												{{ __('History') }}
-											</a>
+											
 											<a class="dropdown-item" style="padding: 0; margin-left:0px; color:black;" href="{{ route('logout') }}" onclick="event.preventDefault();
 																		 document.getElementById('logout-form').submit();">
 												{{ __('Logout') }}
@@ -43,6 +40,9 @@
 											<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
 												@csrf
 											</form>
+
+											
+											<a href="">History</a>
 										</div>
 									</li>
 		                        @endguest

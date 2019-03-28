@@ -53,7 +53,6 @@ class DiningController extends Controller
             "price"=>request('price'),
             "photo" => $photo,
             "capacity" => request('capacity'),
-            "location" => request('location'),
             "description" => request('description'),
            
             
@@ -71,6 +70,8 @@ class DiningController extends Controller
     public function show($id)
     {
         //
+         $dinings = Dining::find($id);
+        return view('frontend/diningdetail',compact('dinings'));
     }
 
     /**
@@ -110,7 +111,7 @@ class DiningController extends Controller
         $dinings->price=request('price');
         $dinings->photo=$photo;
         $dinings->capacity=request('capacity');
-        $dinings->location=request('location');
+        
         $dinings->description=request('description');
 
         $dinings->save();

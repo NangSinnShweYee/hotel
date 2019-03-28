@@ -21,7 +21,7 @@
                       <td>Price</td>
                       <td>Photo</td>
                       <td>Capacity</td>
-                      <td>Location</td>
+
                       <td>Description</td>
                     
                       

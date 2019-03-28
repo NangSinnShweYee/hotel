@@ -75,7 +75,8 @@ class BusPackageController extends Controller
      */
     public function show($id)
     {
-        //
+         $bus_packages = BusPackage::find($id);
+        return view('frontend/busdetail',compact('bus_packages'));
     }
 
     /**

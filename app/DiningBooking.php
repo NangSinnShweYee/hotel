@@ -4,22 +4,23 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class HallBooking extends Model
+class DiningBooking extends Model
 {
     //
+    //
      protected $fillable = [
-    'bus_id',
+    'dining_id',
         'user_id',
-        'start_time',
-        'end_time',
+        'date'
+    
  ];
 public function users()
     {
         return $this->hasOne(User::class,'id');
     }
 
-    public function halls()
+    public function dinings()
     {
-        return $this->hasOne(Hall::class,'id');
+        return $this->hasOne(Dining::class,'id');
     }
 }

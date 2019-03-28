@@ -12,12 +12,29 @@
       
           <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
             <div class="card-body">
-                <table class="table">
-                    <tr>
-                        <th>No.</th>
-                        <th>Room type name</th>
-                        <th>Number of time booked</th>
-                    </tr>
+                <table class="table" id="myTable">
+                    <thead>
+                        <tr>
+                            <th>No.</th>
+                            <th>Room type name</th>
+                            <th>Number of time booked</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    @php
+                       $i = 0 
+                    @endphp
+                        @foreach ($room_categories as $category)
+                        <tr>
+                            <td>{{$i+1}}</td>
+                            <td>{{$category->name}}</td>
+                            <td>{{$array[$i]}}</td>
+                         </tr>
+                         @php
+                             $i++;
+                         @endphp
+                        @endforeach
+                    </tbody>
                 </table>
             </div>
           </div>
@@ -32,7 +49,30 @@
           </div>
           <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
             <div class="card-body">
-              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    <table class="table" id="myTable">
+                            <thead>
+                                <tr>
+                                    <th>No.</th>
+                                    <th>Room type name</th>
+                                    <th>Number of time booked</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            @php
+                               $i = 0 
+                            @endphp
+                                @foreach ($room_categories as $category)
+                                <tr>
+                                    <td>{{$i+1}}</td>
+                                    <td>{{$category->name}}</td>
+                                    <td>{{$array[$i]}}</td>
+                                 </tr>
+                                 @php
+                                     $i++;
+                                 @endphp
+                                @endforeach
+                            </tbody>
+                        </table>
             </div>
           </div>
         </div>

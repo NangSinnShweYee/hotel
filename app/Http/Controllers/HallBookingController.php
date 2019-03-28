@@ -9,6 +9,7 @@ use VM\TimeOverlapCalculator\Entity\TimeSlot;
 use VM\TimeOverlapCalculator\Generator\TimeSlotGenerator;
 use Carbon\Carbon;
 
+
 class HallBookingController extends Controller
 {
     /**
@@ -42,12 +43,12 @@ class HallBookingController extends Controller
     public function store(Request $request)
     {
         //
-        $request->validate([
-            'check_in' => 'required|min:10',
-            'check_out' => 'required',            
-        ]);
-        $check_indate = Carbon::parse( request('check_in'));
-        $check_outdate = Carbon::parse( request('check_out'));
+        /*$request->validate([
+            'start_time' => 'required',
+            'end_time' => 'required',            
+        ]);*/
+        $check_indate = Carbon::parse( request('start_time'));
+        $check_outdate = Carbon::parse( request('end_time'));
 
         
         $calculator = new TimeOverlapCalculator();  
@@ -71,7 +72,7 @@ class HallBookingController extends Controller
         
 
         if($isOverlap){
-            return back()->with('overlap','The room is not available in that time period.');
+            return back()->with('overlap','The Hall is not available in that time period.');
             
         }
         else{
@@ -79,11 +80,13 @@ class HallBookingController extends Controller
             HallBooking::create([
                 "hall_id" => request('hall_id'),
                 "user_id" => request('user_id'),
-                "start_time" => request('check_in'),
-                "end_time" => request('check_out'),   
+                "start_time" => request('start_time'),
+                "end_time" => request('end_time'),   
     
             ]);
-            return redirect('/')->with('success', 'Booking has been created');
+            
+            //echo ($hall_id);
+             //return redirect('/')->with('success', 'Booking has been created');
         }
         
         

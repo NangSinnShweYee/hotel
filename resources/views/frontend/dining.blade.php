@@ -1,91 +1,34 @@
 @extends('frontend/master')
 @section('content')
 
-
-
 <section class="pricing py-5">
 	<div class="container">
+		
 		<div class="row">
+			@foreach ($dinings as $dining)
 			<!-- Free Tier -->
-			<div class="col-lg-4 ">
+			<div class="col-md-4 ">
 				<div class="card mb-5 mb-lg-0">
 					
 					<div class="card-body">
-						<a href="#"><img class="card-img-top img-fluid" src="template/images/dining5.jpg"></a>
+						<a href="{{$dining->photo}}"><img class="card-img-top img-fluid" src="{{$dining->photo}}"></a>
 					</div>
 					<div class="card-header">
-						<h2 class="text-center">Birthday Set</h2>
+						<h2 class="text-center">{{$dining->name}}</h2>
+
+						
 					</div>
+					<div class="card-footer">
+						<a href="{{route('dinings.show',$dining->id)}}" title="" class="btn btn-success w-100">Book Now</a>
+					</div>
+
 				</div>
 			</div>
+		@endforeach
 
-			<div class="col-lg-4">
-				<div class="card mb-5 mb-lg-0">
-					
-					<div class="card-body">
-						<img src="template/images/dining6.jpg" alt="" class="card-img-top">
-																						
-					</div>
-					<div class="card-header">
-						<h2 class="text-center">Family Dinner Set</h2>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-lg-4">
-				<div class="card mb-5 mb-lg-0">
-					
-					<div class="card-body">
-						<img src="template/images/dining1.jpg" alt="" class="card-img-top">												
-					</div>
-					<div class="card-header">
-						<h2 class="text-center">Anniversary Set</h2>
-					</div>
-				</div>
-			</div>
-
-		</div>
-		<div class="row mt-5">
-			<!-- Free Tier -->
-			<div class="col-lg-4">
-				<div class="card mb-5 mb-lg-0">
-					
-					<div class="card-body">
-						<img class="card-img-top img-fluid" src="template/images/dining4.jpg" width="100%">
-					</div>
-					<div class="card-header">
-						<h2 class="text-center">Staff Dinner Set</h2>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-lg-4">
-				<div class="card mb-5 mb-lg-0">
-					
-					<div class="card-body">
-						<img src="template/images/dining3.jpg" alt="" class="card-img-top">
-																						
-					</div>
-					<div class="card-header">
-						<h2 class="text-center">Friends Gathering</h2>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-lg-4">
-				<div class="card mb-5 mb-lg-0">
-					
-					<div class="card-body">
-						<img src="template/images/valentines.jpg" alt="" class="card-img-top">												
-					</div>
-					<div class="card-header">
-						<h2 class="text-center">Valentine Set</h2>
-					</div>
-				</div>
-			</div>
-
-		</div>
 	</div>
 </section>
+
+
 
 @endsection

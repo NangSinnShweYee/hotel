@@ -13,6 +13,10 @@ class Room extends Model
         'description',
         'price',
         'availability',
+        'wifi',
+        'aircorn',
+        'bathroom',
+        'tv',
         'bedcount',
         'category_id',
 
@@ -20,6 +24,9 @@ class Room extends Model
     public function room_categories()
     {
         return $this->belongsTo(RoomCategory::class,'category_id');
+    }
+    public function room_bookings(){
+        return $this->belongsToMany(RoomBooking::class);
     }
 }
 
