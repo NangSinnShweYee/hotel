@@ -55,12 +55,11 @@
 		</div>
 		<div class="container">
 			<div class="row">
-				@foreach ($rooms as $room)
+				
+				@foreach ($rooms as $room)  
 					@php
 						$photos = json_decode($room->photo);	
 					@endphp
-				@endforeach
-				@foreach ($rooms as $room)  
 				<div class="col-md-4 room-wrap animate-box">
 					@foreach ($photos as $key => $photo)
 						@if ($key == 0)

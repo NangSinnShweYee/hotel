@@ -11,42 +11,21 @@
                 @php
                 $photoarray = json_decode($rooms->photo)
                 @endphp
-                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                    <ol class="carousel-indicators">
-                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                    </ol>
-                    <div class="carousel-inner">
-                        @foreach ($photoarray as $item)
-                        <div class="carousel-item active">
-                                <img src="{{asset($item)}}" class="d-block w-100" alt="">
-                                {{-- <img class="" src="..." alt="First slide"> --}}
-                            </div>
-                        
-                        @endforeach
-                        {{-- <div class="carousel-item active">
-                            <img class="d-block w-100" src="..." alt="First slide">
+                <aside id="qbootstrap-hero">
+                        <div class="flexslider">
+                            <ul class="slides">
+                                @foreach ($photoarray as $item)
+                                <li>
+                                        <img src="{{asset($item)}}" class="img-fluid" alt="">
+                                </li>  
+                               
+                                @endforeach 
+                                                              
+                            </ul>
                         </div>
-                        <div class="carousel-item">
-                            <img class="d-block w-100" src="..." alt="Second slide">
-                        </div>
-                        <div class="carousel-item">
-                            <img class="d-block w-100" src="..." alt="Third slide">
-                        </div> --}}
-                    </div>
-                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
-                </div>
-                {{-- @foreach ($photoarray as $item)
-                <img src="{{asset($item)}}" class="img-fluid" alt="">
-                @endforeach --}}
+                    </aside>
+                
+                {{-- <img src="{{asset($item)}}" class="d-block w-100" alt=""> --}}
 
             </div>
             <div class="col-md-5">
