@@ -54,6 +54,11 @@
                 <span>Dinings</span></a>
     </li>
     <li class="nav-item">
+            <a class="nav-link" href="{{'/dining_bookings'}}">
+                <i class="fas fa-fw fa-tachometer-alt"></i>
+                <span>Dining Bookings</span></a>
+    </li>
+    <li class="nav-item">
             <a class="nav-link" href="{{'/reports'}}">
                 <i class="fas fa-fw fa-tachometer-alt"></i>
                 <span>Reports</span></a>
