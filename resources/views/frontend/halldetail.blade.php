@@ -29,7 +29,7 @@
                     <input type="hidden" name="user_id" value="{{Auth::user()->id}}">
                     @csrf
                       <label for="name">Start Time:</label>
-                      <input type="time" class="form-control" 
+                      <input type="datetime-local" class="form-control" 
                       name="start_time"/>
                     @if ($errors->has('start_time'))
                     <span class="invalid-feedback" role="alert">
@@ -42,7 +42,7 @@
                 <div class="col-md-3">
                     <i class="icon icon-calendar2"></i>
                     <label for="name">End Time:</label>
-                      <input type="time" class="form-control" 
+                      <input type="datetime-local" class="form-control" 
                       name="end_time"/>
                     @if ($errors->has('end_time'))
                 <span class="invalid-feedback" role="alert">
@@ -52,7 +52,7 @@
                 </div>
             </div>
             <input type="submit" name="submit" id="submit" value="Book" class="btn btn-primary">
-            @csrf
+            
         </form>
     </div>
 

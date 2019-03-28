@@ -46,29 +46,30 @@
 							<span class="price-room">${{$room->price}}</span>
 								<span class="per">/ per night</span>
 							</p>
+							
 							<ul>
 							@if($room->aircorn=='1')
-								<li><i class="icon-check"></i>Aircorn Include</li>
+								<li><i class="fa fa-check-square text-dark"></i>Air-con</li>
 							@else
-								<li><i class="icon-check"></i>aircorn does not Include</li>
+								<li><i class="fas fa-times text-dark"></i>Air-con</li>
 							@endif
 
 							@if($room->wifi=='1')
-								<li><i class="icon-check"></i>Wifi Include</li>
+								<li><i class="fa fa-check-square text-dark"></i>Wifi Include</li>
 							@else
-								<li><i class="icon-check"></i>Wifi does not Include</li>
+								<li><i class="fas fa-times text-dark"></i>Wifi does not Include</li>
 							@endif
 
 							@if($room->bathroom=='1')
-								<li><i class="icon-check"></i>Bathroom Include</li>
+								<li><i class="fa fa-check-square text-dark"></i>Bathroom Include</li>
 							@else
-								<li><i class="icon-check"></i>Bathroom does not Include</li>
+								<li><i class="fas fa-times text-dark"></i>Bathroom does not Include</li>
 							@endif
 
 							@if($room->tv=='1')
-								<li><i class="icon-check"></i>TV Include</li>
+								<li><i class="fa fa-check-square text-dark"></i>TV Include</li>
 							@else
-								<li><i class="icon-check"></i>TV does not Include</li>
+								<li><i class="fas fa-times text-dark"></i>TV does not Include</li>
 							@endif
 
 							<p>{{$room->description}}</p>
