@@ -3,6 +3,8 @@
 <section class="pricing py-5">
 	<div class="container">
 		<h1>Room Booking</h1>
+		@if(!empty( $roombookings)) 
+
 		<table class="table table-striped">
 
 			<thead>
@@ -15,6 +17,7 @@
 				</tr>
 			</thead>
 			<tbody>
+				
 				<?php $i=1 ?>
 				@foreach($roombookings as $roombooking)
 				<tr>
@@ -24,16 +27,20 @@
 					<td>{{$roombooking->check_in}}</td>
 					<td>{{$roombooking->check_out}}</td>               
 					<td> <form action="{{ route('room_bookings.destroy',$roombooking->id)}}" method="post">
-                      @csrf
-                      @method('DELETE')
-                      <button class="btn btn-danger" type="submit">Delete</button>
-                    </form></td>
+						@csrf
+						@method('DELETE')
+						<button class="btn btn-danger" type="submit">Delete</button>
+					</form></td>
 				</tr>
 				<?php $i++; ?>
 				@endforeach
 			</tbody>
 		</table>
+		@else <h2>Non</h2>
+		@endif
+
 		<h1>Hall Booking</h1>
+		
 		<table class="table table-striped">
 			
 			<thead>
@@ -59,16 +66,18 @@
 					<td>{{$hallbooking->start_time}}</td>
 					<td>{{$hallbooking->end_time}}</td>               
 					<td> <form action="{{ route('hall_bookings.destroy',$hallbooking->id)}}" method="post">
-                      @csrf
-                      @method('DELETE')
-                      <button class="btn btn-danger" type="submit">Delete</button>
-                    </form></td>
+						@csrf
+						@method('DELETE')
+						<button class="btn btn-danger" type="submit">Delete</button>
+					</form></td>
 				</tr>
 				<?php $i++; ?>
 				@endforeach
 
 			</tbody>
 		</table>
+
+		
 		<h1>Bus Booking</h1>
 		<table class="table table-striped">
 			
@@ -84,17 +93,20 @@
 			<tbody>
 				<?php $i=1 ?>
 				@foreach($busbookings as $busbooking)
+				@if(!empty( $hallbookings))
 				<tr>
 					<td>{{$i}}</td>
 					<td>{{$busbooking->bus_id}}</td>
 					
 					<td>{{$busbooking->date}}</td>               
 					<td> <form action="{{ route('bus_bookings.destroy',$busbooking->id)}}" method="post">
-                      @csrf
-                      @method('DELETE')
-                      <button class="btn btn-danger" type="submit">Delete</button>
-                    </form></td>
+						@csrf
+						@method('DELETE')
+						<button class="btn btn-danger" type="submit">Delete</button>
+					</form></td>
 				</tr>
+				@else <tr><td colspan="2">Non</td></tr>
+				@endif
 				<?php $i++; ?>
 				@endforeach
 			</tbody>
@@ -120,10 +132,10 @@
 					
 					<td>{{$diningbooking->date}}</td>               
 					<td> <form action="{{ route('dining_bookings.destroy',$diningbooking->id)}}" method="post">
-                      @csrf
-                      @method('DELETE')
-                      <button class="btn btn-danger" type="submit">Delete</button>
-                    </form></td>
+						@csrf
+						@method('DELETE')
+						<button class="btn btn-danger" type="submit">Delete</button>
+					</form></td>
 				</tr>
 				<?php $i++; ?>
 				@endforeach
