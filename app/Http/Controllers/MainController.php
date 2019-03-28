@@ -24,7 +24,7 @@ class MainController extends Controller
         $rooms = Room::paginate(6);
 
         if($category_id = request('category_id')){
-            $rooms = Room::where ('category_id',$category_id)->get();
+            $rooms = Room::where ('category_id',$category_id)->paginate(6);
         }
         $categories = RoomCategory::all();            
     
