@@ -13,13 +13,13 @@ class HallBooking extends Model
         'start_time',
         'end_time',
  ];
-public function user()
+public function users()
     {
-        return $this->hasOne(User::class,'id','user_id');
+        return $this->hasOne(User::class,'id');
     }
 
-    public function hall()
+    public function halls()
     {
-        return $this->hasOne(Hall::class,'id','hall_id');
+        return $this->hasOne(Hall::class,'id');
     }
 }

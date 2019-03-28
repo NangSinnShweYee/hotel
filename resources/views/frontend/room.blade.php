@@ -55,18 +55,9 @@
 		</div>
 		<div class="container">
 			<div class="row">
-				
 				@foreach ($rooms as $room)  
-					@php
-						$photos = json_decode($room->photo);	
-					@endphp
 				<div class="col-md-4 room-wrap animate-box">
-					@foreach ($photos as $key => $photo)
-						@if ($key == 0)
-						<a href="{{$photo}}" class="room image-popup-link" style="background-image: url({{$photo}});"></a>
-
-						@endif
-					@endforeach
+					<a href="{{$room->photo}}" class="room image-popup-link" style="background-image: url({{$room->photo}});"></a>
 					
 					<div class="desc">
 						<h3><a href="#">{{$room->room_categories->name}}</a></h3>

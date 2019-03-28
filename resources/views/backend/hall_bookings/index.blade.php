@@ -19,8 +19,8 @@
               <td>No</td>
               <td>Hall Name</td>
               <td>User Name</td>
-              <td>Start Time</td>
-              <td>End Time</td>
+              <td>Date</td>
+              
               
               
             </tr>
@@ -32,8 +32,8 @@
             <td>{{$i}}</td>
                 <td>{{$hall_booking->hall->name}}</td>
                 <td>{{$hall_booking->user->name}}</td>
-                <td>{{$hall_booking->start_time}}</td>
-                 <td>{{$hall_booking->end_time}}</td>               
+                <td>{{$hall_booking->date}}</td>
+                               
                 
             </tr>
             <?php $i++; ?>

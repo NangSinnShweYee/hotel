@@ -39,11 +39,6 @@
              <span>Halls</span></a>
      </li>
      <li class="nav-item">
-         <a class="nav-link" href="{{'/hall_bookings'}}">
-             <i class="fas fa-fw fa-tachometer-alt"></i>
-             <span>Hall Bookings</span></a>
-     </li>
-     <li class="nav-item">
             <a class="nav-link" href="{{'/bus_packages'}}">
                 <i class="fas fa-fw fa-tachometer-alt"></i>
                 <span>Bus Packages</span></a>
@@ -52,11 +47,6 @@
             <a class="nav-link" href="{{'/dinings'}}">
                 <i class="fas fa-fw fa-tachometer-alt"></i>
                 <span>Dinings</span></a>
-    </li>
-    <li class="nav-item">
-            <a class="nav-link" href="{{'/dining_bookings'}}">
-                <i class="fas fa-fw fa-tachometer-alt"></i>
-                <span>Dining Bookings</span></a>
     </li>
     <li class="nav-item">
             <a class="nav-link" href="{{'/reports'}}">

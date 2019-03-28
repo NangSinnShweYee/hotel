@@ -71,7 +71,6 @@ class MainController extends Controller
         return view('frontend/history',compact('roombookings','hallbookings','diningbookings','busbookings'));
     }
     public function report(){
-        $today = \Carbon\Carbon::today();
         $room_categories = RoomCategory::all();
         $bus_packages = BusPackage::all();
         $halls= Hall::all();
@@ -81,7 +80,6 @@ class MainController extends Controller
         $roomsall = Room::all();
         $money = 0;
         $room_bookings = RoomBooking::all();
-        $dailybookings = RoomBooking::whereDate('created_at', $today)->get();
 
         foreach ($room_categories as $cat) {
             # code...
@@ -93,34 +91,22 @@ class MainController extends Controller
             
             array_push($array,$counts);
         }
-        // foreach ($bus_packages as $cat) {
-        //     # code...
-        //     $counts = DB::table('hall_bookings')
-        // ->join('rooms', 'rooms.id', '=', 'room_bookings.room_id')
-        // ->join('room_categories', 'room_categories.id', '=', 'rooms.category_id')
-        // ->where('room_categories.id', '=', $cat->id)
-        // ->count();
+        foreach ($bus_packages as $cat) {
+            # code...
+            $counts = DB::table('hall_bookings')
+        ->join('rooms', 'rooms.id', '=', 'room_bookings.room_id')
+        ->join('room_categories', 'room_categories.id', '=', 'rooms.category_id')
+        ->where('room_categories.id', '=', $cat->id)
+        ->count();
             
-        //     array_push($array,$counts);
-        // }
+            array_push($array,$counts);
+        }
         
         foreach ($room_bookings as $room_booking) {            
             $money += $room_booking->room->price;            
         }
-        $dailyincomes = array();
 
-        foreach ($dailybookings as $dailybooking) {
-            $check_out = \Carbon\Carbon::parse($dailybooking->check_out);
-            $dailyincomes[] = [
-                'room_desc' => $dailybooking->room->description,
-                'room_number' => $dailybooking->room->room_number,
-                'user_id' => $dailybooking->user_id,
-                'booked_days' => $check_out->diffInDays($dailybooking->check_in),
-                'total_cost' => $dailybooking->room->price * $check_out->diffInDays($dailybooking->check_in)
-            ];
-            $money += $dailybooking->room->price * $check_out->diffInDays($dailybooking->check_in);
-        }
-        // echo $money;
-        return view('backend/reports.index',compact('room_categories','array', 'dailyincomes', 'money'));
+        echo $money;
+        return view('backend/reports.index',compact('room_categories','array'));
     }
 }

@@ -35,7 +35,14 @@
                     <input type="text" class="form-control" name="price" value="{{$halls->price}}" />
                 </div>
                 <div class="form-group">
-                    
+                    <label for="user_email" class="col-md-4 control-label">Photo</label>
+                    <input type="file" name="photo"
+                        class="form-control-file {{ $errors->has('photo') ? ' is-invalid' : '' }}" />
+                    @if ($errors->has('photo'))
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $errors->first('photo') }}</strong>
+                    </span>
+                    @endif
 
                      <ul class="nav nav-tabs" id="myTab" role="tablist">
                       <li class="nav-item">
@@ -51,19 +58,8 @@
                     <img src="{{asset($halls->photo)}}" class="img-fluid">
                     <input type="hidden" name="oldimage" value="{{$halls->photo}}">
                 </div>
-                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                        <label for="photo" class="col-md-4 control-label">New Photo</label>
-                        <input type="file" name="photo"
-                            class="form-control-file {{ $errors->has('photo') ? ' is-invalid' : '' }}" />
-                        @if ($errors->has('photo'))
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $errors->first('photo') }}</strong>
-                        </span>
-                        @endif
-                </div>
-                <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-                    
-                </div>
+                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
+                <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
 
 
 

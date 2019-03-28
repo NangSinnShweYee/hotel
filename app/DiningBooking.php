@@ -14,13 +14,13 @@ class DiningBooking extends Model
         'date'
     
  ];
-public function user()
+public function users()
     {
-        return $this->hasOne(User::class,'id','user_id');
+        return $this->hasOne(User::class,'id');
     }
 
-    public function dining()
+    public function dinings()
     {
-        return $this->hasOne(Dining::class,'id','dining_id');
+        return $this->hasOne(Dining::class,'id');
     }
 }

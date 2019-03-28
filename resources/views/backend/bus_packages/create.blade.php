@@ -71,8 +71,7 @@
           <div class="form-group">
               @csrf
               <label for="check" >Guide:</label>
-              <input type="hidden" name="guide" value="0">
-              <input type="checkbox"  name="guide" value="1">
+              <input type="checkbox"  name="guide" id="check" value="0" />
           </div>
           <button type="submit" class="btn btn-primary">Add</button>
       </form>

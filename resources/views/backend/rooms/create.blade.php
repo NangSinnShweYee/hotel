@@ -39,7 +39,7 @@
                 </div>
                 <div class="form-group">
                     <label for="user_email" class="col-md-4 control-label">Photo</label>
-                    <input type="file" name="photo[]" multiple=""
+                    <input type="file" name="photo"
                         class="form-control-file {{ $errors->has('photo') ? ' is-invalid' : '' }}" />
                     @if ($errors->has('photo'))
                     <span class="invalid-feedback" role="alert">
@@ -63,28 +63,28 @@
                 @csrf                      
                        <label for="wifi">Wifi</label>
                        <input type="hidden" name="wifi" value="0">
-                        <input type="checkbox" name="wifi" value="1" >
+                        <input type="checkbox" name="wifi" value="0" >
                 </div>
 
                 <div class="form-group">  
                 @csrf                      
                        <label for="aircorn">Air-Corn</label>
                        <input type="hidden" name="aircorn" value="0">
-                        <input type="checkbox" name="aircorn" value="1" >
+                        <input type="checkbox" name="aircorn" value="0" >
                 </div>
 
                 <div class="form-group">  
                 @csrf                      
                        <label for="bathroom">Bathroom</label>
                        <input type="hidden" name="bathroom" value="0">
-                        <input type="checkbox" name="bathroom" value="1" >
+                        <input type="checkbox" name="bathroom" value="0" >
                 </div>
 
                 <div class="form-group">  
                 @csrf                      
                        <label for="tv">TV</label>
                        <input type="hidden" name="tv" value="0">
-                        <input type="checkbox" name="tv" value="1" >
+                        <input type="checkbox" name="tv" value="0" >
                 </div>
 
             </div>

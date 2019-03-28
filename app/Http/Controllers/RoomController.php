@@ -48,26 +48,21 @@ class RoomController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'photo' => 'required|min:3',
-            'photo.*' => 'mimes:jpeg,jpg,png',
+            'photo' => 'required|',
                        
         ]);
         //
         //Upload files
-        if($request->hasFile('photo')){
-            foreach ($request->file('photo') as $photo) {
-                # code...
-                $name = $photo->getClientOriginalName();
-                $photo->move(public_path().'/storage/image/',$name);
-                $photodata[] = '/storage/image/'.$name;
-            }
-            
-            
-        }
+        // if($request->hasFile('photo')){
+            $photo = $request->file('photo');
+            $name = $photo->getClientOriginalName();
+            $photo->move(public_path().'/storage/image/',$name);
+            $photo = '/storage/image/'.$name;
+        // }
         Room::create([
             "category_id" => request('category_id'),
             "room_number" => request('room_number'),
-            "photo" => json_encode($photodata),
+            "photo" => $photo,
             "description" => request('description'),
             "wifi" => request('wifi'),
             "aircorn" => request('aircorn'),
