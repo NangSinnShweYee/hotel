@@ -136,6 +136,8 @@ class RoomBookingController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $room_bookings = RoomBooking::find($id);
+        $room_bookings->delete();
+        return redirect('/history');
     }
 }
