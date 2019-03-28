@@ -39,7 +39,7 @@
                 </div>
                 <div class="form-group">
                     <label for="user_email" class="col-md-4 control-label">Photo</label>
-                    <input type="file" name="photo"
+                    <input type="file" name="photo[]" multiple=""
                         class="form-control-file {{ $errors->has('photo') ? ' is-invalid' : '' }}" />
                     @if ($errors->has('photo'))
                     <span class="invalid-feedback" role="alert">
