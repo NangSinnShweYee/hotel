@@ -17,23 +17,23 @@
       <thead>
             <tr>
               <td>No</td>
-              <td>Room Number</td>
-              <td>User name</td>
-              <td>Check in date</td>
-              <td>Check out date</td>
+              <td>Hall Name</td>
+              <td>User Name</td>
+              <td>Date</td>
+              
               
               
             </tr>
         </thead>
       <tbody>
           <?php $i=1 ?>
-            @foreach($room_bookings as $room_booking)
+            @foreach($hall_bookings as $hall_booking)
             <tr>
             <td>{{$i}}</td>
-                <td>{{$room_booking->room->room_number}}</td>
-                <td>{{$room_booking->user->name}}</td>
-                <td>{{$room_booking->check_in}}</td>
-                <td>{{$room_booking->check_out}}</td>               
+                <td>{{$hall_booking->hall->name}}</td>
+                <td>{{$hall_booking->user->name}}</td>
+                <td>{{$hall_booking->date}}</td>
+                               
                 
             </tr>
             <?php $i++; ?>

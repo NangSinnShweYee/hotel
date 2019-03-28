@@ -8,7 +8,7 @@ class HallBooking extends Model
 {
     //
      protected $fillable = [
-    'bus_id',
+        'hall_id',
         'user_id',
         'start_time',
         'end_time',
