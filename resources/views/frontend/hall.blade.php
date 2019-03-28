@@ -21,8 +21,11 @@
 		</ul>
 	</div>
 </aside>
+
+<section class="pricing py-5">
 <div id="qbootstrap-rooms">
 	<div class="container">
+
 		<div class="row">
 			<div class="col-md-6 col-md-offset-3 text-center qbootstrap-heading animate-box">
 				<span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span>
@@ -30,38 +33,39 @@
 				<p>We love to tell our successful far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
 			</div>
 		</div>
-
-
+		@foreach ($halls as $hall)
+		<!-- Project One -->
 		<div class="row">
-			@foreach ($halls as $hall)
-			<div class="col-md-6 room-wrap animate-box">
+			
+
+			<div class="col-md-7 room-wrap animate-box">
 				<a href="{{$hall->photo}}" class="room image-popup-link" style="background-image: url({{$hall->photo}});"></a>
 			</div>
-
-			<div class="col-md-6 room-wrap animate-box">
-				
-				<div class="desc">
-					<h3><a href="">{{$hall->name}}</a></h3>
+			<div class="col-md-5  room-wrap animate-box">
+				 <div class="desc">
+					<h3>{{$hall->name}}</h3>
 					<p class="price">
-						<span class="currency">$</span>
-						<span class="price-room">{{$hall->price}}</span>
+						
+						<span class="price-room">$ {{$hall->price}}</span>
 						<span class="per">/ per hour</span>
 					</p>
 					<ul>
 						<li><i class="icon-check"></i> 
-						{{$hall->capacity}}</li>
-						<li><i class="icon-check"></i>{{$hall->location}}</li>
-						<li><i class="icon-check"></i>{{$hall->description}}</li>
-					</ul>
-					<p><a class="btn btn-success" href="{{route('halls.show',$hall->id)}}">Book now!</a></p>
+							{{$hall->capacity}}</li>
+							<li><i class="fas fa-location-arrow"></i>{{$hall->location}}</li>
+							<li><i class="icon-check"></i>{{$hall->description}}</li>
+						</ul>
+						<p><a class="btn btn-success" href="{{route('halls.show',$hall->id)}}">Book now!</a></p>
 				</div>
 			</div>
-			@endforeach
 		</div>
+			<!-- /.row -->
 
-		
-	</div>
+			<hr>
 
-</div>
+			@endforeach
 
-@endsection
+		</div>
+	</div>    
+</section>
+	@endsection

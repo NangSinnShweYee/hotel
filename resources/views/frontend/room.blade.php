@@ -28,19 +28,20 @@
 
 		<div class="collapse navbar-collapse">
 			<ul class="navbar-nav ml-auto">
-				<li class="nav-item dropdown mx-2">
+				<h2><li class="nav-item dropdown mx-2">
 					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 					Room Categories
 					</a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 						@foreach($categories as $category)
-						<a class="dropdown-item" href="/room/?category_id={{$category->id}}">{{$category->name}}</a>
+						<h3><a class="dropdown-item" href="/room/?category_id={{$category->id}}">{{$category->name}}</a></h3>
 						@endforeach
 					</div>
-				</li>
+				</li></h2>
 			</ul>
 		</div>
 	</div>
+
 </nav>
 
 
