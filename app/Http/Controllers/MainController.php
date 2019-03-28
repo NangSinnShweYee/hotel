@@ -7,9 +7,13 @@ use App\Room;
 use App\RoomCategory;
 use App\Hall;
 use App\RoomBooking;
+use App\HallBooking;
+use App\DiningBooking;
+use App\BusBooking;
 use App\Dining;
 use App\BusPackage;
 use DB;
+use Auth;
 
 
 class MainController extends Controller
@@ -26,7 +30,7 @@ class MainController extends Controller
             $rooms = Room::where ('category_id',$category_id)->get();
         }
         $categories = RoomCategory::all();            
-    
+
         return view('frontend/room',compact('categories','rooms'));
     }
 
@@ -35,15 +39,15 @@ class MainController extends Controller
         $halls = Hall::paginate(4);
 
         $halls = Hall::all();            
-    
+
         return view('frontend/hall',compact('halls'));
     }
-   public function dining()
+    public function dining()
     {
         $dinings = Dining::paginate(4);
 
         $dinings = Dining::all();            
-    
+
         return view('frontend/dining',compact('dinings'));
     } 
     public function bus()
@@ -51,14 +55,19 @@ class MainController extends Controller
         $bus_packages = BusPackage::paginate(4);
 
         $bus_packages = BusPackage::all();            
-    
+
         return view('frontend/bus',compact('bus_packages'));
     } 
     public function history()
     {
-                    
-     $bookings = RoomBooking::where ('user_id',$user_id)->get();
-        return view('frontend/history',compact('bookings'));
+
+            // dd($category_id);
+        $user_id=Auth::id();
+        $roombookings = RoomBooking::where('user_id',$user_id)->get();
+        $hallbookings = HallBooking::where('user_id',$user_id)->get();
+        $busbookings = BusBooking::where('user_id',$user_id)->get();
+        $diningbookings = DiningBooking::where('user_id',$user_id)->get(); 
+        return view('frontend/history',compact('roombookings','hallbookings','diningbookings','busbookings'));
     }
     public function report(){
         $room_categories = RoomCategory::all();        
@@ -70,10 +79,10 @@ class MainController extends Controller
         foreach ($room_categories as $cat) {
             # code...
             $counts = DB::table('room_bookings')
-        ->join('rooms', 'rooms.id', '=', 'room_bookings.room_id')
-        ->join('room_categories', 'room_categories.id', '=', 'rooms.category_id')
-        ->where('room_categories.id', '=', $cat->id)
-        ->count();
+            ->join('rooms', 'rooms.id', '=', 'room_bookings.room_id')
+            ->join('room_categories', 'room_categories.id', '=', 'rooms.category_id')
+            ->where('room_categories.id', '=', $cat->id)
+            ->count();
             
             array_push($array,$counts);
         }

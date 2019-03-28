@@ -132,6 +132,8 @@ class HallBookingController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $hall_bookings = HallBooking::find($id);
+        $hall_bookings->delete();
+        return redirect('/history');
     }
 }
