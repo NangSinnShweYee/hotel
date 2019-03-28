@@ -23,7 +23,7 @@
                                                               
                             </ul>
                         </div>
-                    </aside>
+                </aside>
                 
                 {{-- <img src="{{asset($item)}}" class="d-block w-100" alt=""> --}}
 
