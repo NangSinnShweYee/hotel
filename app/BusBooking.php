@@ -12,13 +12,13 @@ class BusBooking extends Model
         'user_id',
         'date'
  ];
-public function users()
+public function user()
     {
-        return $this->hasOne(User::class,'id');
+        return $this->hasOne(User::class,'id','user_id');
     }
 
-    public function bus_packages()
+    public function bus_package()
     {
-        return $this->hasOne(BusPackage::class,'id');
+        return $this->hasOne(BusPackage::class,'id','bus_id');
     }
 }

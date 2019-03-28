@@ -66,10 +66,6 @@
                 </div>
 
 
-
-
-
-
                 </div>
                   <div class="form-group">                        
                         <label for="name">Capacity </label>

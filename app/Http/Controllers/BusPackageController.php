@@ -88,6 +88,8 @@ class BusPackageController extends Controller
     public function edit($id)
     {
         //
+        $bus_packages = BusPackage::find($id);
+        return view('backend/bus_packages.edit',compact('bus_packages'));
     }
 
     /**
@@ -100,6 +102,28 @@ class BusPackageController extends Controller
     public function update(Request $request, $id)
     {
         //
+        if($request->hasfile('photo')){
+            $photo=$request->file('photo');
+            $name=$photo->getClientOriginalName();
+            $photo->move(public_path().'/storage/image/',$name
+        );
+            $photo='storage/image/'.$name;
+        }else{
+            $photo=request('oldimage');
+        }
+        $bus_packages = BusPackage::find($id);
+
+        $bus_packages->name=request('name');
+        $bus_packages->price=request('price');
+        $bus_packages->photo=$photo;
+        $bus_packages->depature_time=request('depature_time');
+        $bus_packages->arrival_time=request('arrival_time');
+        $bus_packages->places=request('places');
+        $bus_packages->description=request('description');
+        $bus_packages->guide=request('guide');
+
+        $bus_packages->save();
+        return redirect('/bus_packages');
     }
 
     /**
@@ -111,5 +135,9 @@ class BusPackageController extends Controller
     public function destroy($id)
     {
         //
+        $bus_packages = BusPackage::find($id);
+        $bus_packages->delete();
+        return redirect('/bus_packages');
+
     }
 }

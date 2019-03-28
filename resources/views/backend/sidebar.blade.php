@@ -49,6 +49,11 @@
                 <span>Bus Packages</span></a>
     </li>
     <li class="nav-item">
+            <a class="nav-link" href="{{'/bus_bookings'}}">
+                <i class="fas fa-fw fa-tachometer-alt"></i>
+                <span>Bus Bookings</span></a>
+    </li>
+    <li class="nav-item">
             <a class="nav-link" href="{{'/dinings'}}">
                 <i class="fas fa-fw fa-tachometer-alt"></i>
                 <span>Dinings</span></a>

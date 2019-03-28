@@ -15,6 +15,7 @@ class BusBookingController extends Controller
     {
         //
         $bus_bookings = BusBooking::all();
+        return view('backend/bus_bookings.index',compact('bus_bookings'));
         
     }
 

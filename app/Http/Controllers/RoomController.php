@@ -48,26 +48,22 @@ class RoomController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'photo' => 'required|min:3',
-            'photo.*' => 'mimes:jpeg,jpg,png',
+            'photo' => 'required|',
+
                        
         ]);
         //
         //Upload files
-        if($request->hasFile('photo')){
-            foreach ($request->file('photo') as $photo) {
-                # code...
-                $name = $photo->getClientOriginalName();
-                $photo->move(public_path().'/storage/image/',$name);
-                $photodata[] = '/storage/image/'.$name;
-            }
-            
-            
-        }
+        // if($request->hasFile('photo')){
+            $photo = $request->file('photo');
+            $name = $photo->getClientOriginalName();
+            $photo->move(public_path().'/storage/image/',$name);
+            $photo = '/storage/image/'.$name;
+        // }
         Room::create([
             "category_id" => request('category_id'),
             "room_number" => request('room_number'),
-            "photo" => json_encode($photodata),
+            "photo" => $photo,
             "description" => request('description'),
             "wifi" => request('wifi'),
             "aircorn" => request('aircorn'),
@@ -103,7 +99,9 @@ class RoomController extends Controller
      */
     public function edit($id)
     {
-        //
+         $rooms = Room::find($id);
+         $categories = RoomCategory::all();
+        return view('backend/rooms.edit',compact('rooms','categories'));
     }
 
     /**
@@ -115,7 +113,24 @@ class RoomController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+         if($request->hasfile('photo')){
+            $photo=$request->file('photo');
+            $name=$photo->getClientOriginalName();
+            $photo->move(public_path().'/storage/image/',$name
+        );
+            $photo='storage/image/'.$name;
+        }else{
+            $photo=request('oldimage');
+        }
+        $rooms=Room::find($id);
+        $rooms->room_number=request('room_number');
+        $rooms->description=request('description');
+        $rooms->price=request('price');
+          
+              $rooms->bedcount=request('bedcount');
+              $rooms->save();
+              return redirect('/rooms');
+
     }
 
     /**
@@ -126,6 +141,8 @@ class RoomController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $rooms=Room::find($id);
+        $rooms->delete();
+        return redirect('/rooms');
     }
 }

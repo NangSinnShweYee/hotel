@@ -10,7 +10,7 @@
     <div class="card-header">
         Edit Room
     </div>
-    {{$rooms}}
+    <!-- {{$rooms}} -->
     <div class="card-body">
         @if ($errors->any())
         <div class="alert alert-danger">
