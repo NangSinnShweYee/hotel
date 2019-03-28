@@ -38,7 +38,17 @@
             <tr>
                 <td>{{$i}}</td>
                 <td>{{$room->room_number}}</td>
-                <td><img src="{{$room->photo}}" alt="" width="200px"></td>
+                @php
+                  $photos = json_decode($room->photo);	
+                @endphp
+                <td>
+                  
+                    @foreach ($photos as $key => $photo)
+                    
+                    <img src="{{$photo}}" alt="" width="200px">
+                    @endforeach
+                  
+                </td>
                 <td>{{$room->description}}</td>
                 <td>{{$room->wifi}}</td>
                 <td>{{$room->aircorn}}</td>
