@@ -16,7 +16,7 @@
         </p>
         <ul>
                             @if($rooms->aircorn=='1')
-                                <li><i class="icon-check"></i>Aircorn Include</li>
+                                <li><i class="fas fa-igloo"></i> Aircorn Include</li>
                             @else
                                 <li><i class="icon-check"></i>aircorn does not Include</li>
                             @endif
