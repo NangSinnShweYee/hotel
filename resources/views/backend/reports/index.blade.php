@@ -53,7 +53,7 @@
                             <thead>
                                 <tr>
                                     <th>No.</th>
-                                    <th>Room type name</th>
+                                    <th>Bus package name</th>
                                     <th>Number of time booked</th>
                                 </tr>
                             </thead>

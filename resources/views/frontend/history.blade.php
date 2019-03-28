@@ -118,8 +118,13 @@
                 <?php $i++; ?>
                 @endforeach
             </tbody>
-        </table>
-        <h1>Dining Booking</h1>
+		</table>
+		@endif
+        <hr>
+		<h1>Dining Booking</h1>
+		@if (sizeof($busbookings)==0)
+			<div>U haven't booked any dining.</div>
+		@else
         <table class="table table-striped">
 
             <thead>
@@ -150,7 +155,8 @@
                 <?php $i++; ?>
                 @endforeach
             </tbody>
-        </table>
+		</table>
+		@endif
 
 
 </section>
