@@ -40,7 +40,7 @@ Route::resource('room_categories', 'RoomCategoryController')->middleware('is_adm
 Route::resource('rooms', 'RoomController')->middleware('is_admin');
 Route::resource('room_bookings', 'RoomBookingController');
 Route::resource('hall_bookings', 'HallBookingController');
-Route::resource('dining_booking s', 'DiningBookingController');
+Route::resource('dining_bookings', 'DiningBookingController');
 Route::resource('bus_bookings', 'BusBookingController');
 Route::resource('halls', 'HallController')->middleware('is_admin');
 Route::resource('bus_packages', 'BusPackageController')->middleware('is_admin');
