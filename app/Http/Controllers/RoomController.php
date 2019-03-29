@@ -119,20 +119,27 @@ class RoomController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $request->validate([            
+            'photo.*' => 'mimes:jpeg,jpg,png',                       
+        ]);
+
         if($request->hasfile('photo')){
-            $photo=$request->file('photo');
-            $name=$photo->getClientOriginalName();
-            $photo->move(public_path().'/storage/image/',$name
-        );
-            $photo='storage/image/'.$name;
+            foreach ($request->file('photo') as $photo) {
+                # code...
+                $name = $photo->getClientOriginalName();
+                $photo->move(public_path().'/storage/image/',$name);
+                $photodata[] = '/storage/image/'.$name;
+            }            
+           $photoinput = json_encode($photodata);
         }else{
-            $photo=request('oldimage');
+            $photoinput=request('oldimage');
         }
+                
         $rooms=Room::find($id);
         $rooms->room_number=request('room_number');
         $rooms->description=request('description');
         $rooms->price=request('price');
-          
+        $rooms->photo = $photoinput;
               $rooms->bedcount=request('bedcount');
               $rooms->save();
               return redirect('/rooms');
