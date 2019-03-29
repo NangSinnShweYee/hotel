@@ -27,7 +27,7 @@ Route::get('/dining', 'MainController@dining');
 
 
 
-Route::get('/reports', 'MainController@report')->middleware('is_admin');
+Route::get('/reports', 'MainController@report');
 
 
 
@@ -36,15 +36,15 @@ Route::get('/admin', function () {
     return view('backend/first');
 })->name('admin')->middleware('is_admin');
 
-Route::resource('room_categories', 'RoomCategoryController')->middleware('is_admin');
-Route::resource('rooms', 'RoomController')->middleware('is_admin');
+Route::resource('room_categories', 'RoomCategoryController');
+Route::resource('rooms', 'RoomController');
 Route::resource('room_bookings', 'RoomBookingController');
 Route::resource('hall_bookings', 'HallBookingController');
 Route::resource('dining_booking s', 'DiningBookingController');
 Route::resource('bus_bookings', 'BusBookingController');
-Route::resource('halls', 'HallController')->middleware('is_admin');
-Route::resource('bus_packages', 'BusPackageController')->middleware('is_admin');
-Route::resource('dinings', 'DiningController')->middleware('is_admin');
+Route::resource('halls', 'HallController');
+Route::resource('bus_packages', 'BusPackageController');
+Route::resource('dinings', 'DiningController');
 
 
 // Route::resource('booking', 'BookingController');
