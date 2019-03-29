@@ -104,6 +104,9 @@ class RoomController extends Controller
     public function edit($id)
     {
         //
+        $rooms = Room::find($id);
+         $categories = RoomCategory::all();
+        return view('backend/rooms.edit',compact('rooms','categories'));
     }
 
     /**
@@ -116,6 +119,23 @@ class RoomController extends Controller
     public function update(Request $request, $id)
     {
         //
+        if($request->hasfile('photo')){
+            $photo=$request->file('photo');
+            $name=$photo->getClientOriginalName();
+            $photo->move(public_path().'/storage/image/',$name
+        );
+            $photo='storage/image/'.$name;
+        }else{
+            $photo=request('oldimage');
+        }
+        $rooms=Room::find($id);
+        $rooms->room_number=request('room_number');
+        $rooms->description=request('description');
+        $rooms->price=request('price');
+          
+              $rooms->bedcount=request('bedcount');
+              $rooms->save();
+              return redirect('/rooms');
     }
 
     /**
@@ -127,5 +147,8 @@ class RoomController extends Controller
     public function destroy($id)
     {
         //
+        $rooms=Room::find($id);
+        $rooms->delete();
+        return redirect('/rooms');
     }
 }
