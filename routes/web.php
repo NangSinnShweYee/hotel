@@ -47,8 +47,7 @@ Route::resource('bus_packages', 'BusPackageController')->middleware('is_admin');
 Route::resource('dinings', 'DiningController')->middleware('is_admin');
 
 
-
-
+// Route::resource('booking', 'BookingController');
 //Route::get('/room','FrontendController@room');
 Auth::routes();
 
