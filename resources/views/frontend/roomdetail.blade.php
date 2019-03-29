@@ -61,7 +61,6 @@
                                 <li><i class="fas fa-times text-dark"></i>TV</li>
                             @endif
 
-                            <p>{{$rooms->description}}</p>
                         </ul>
                 @if(session()->get('overlap'))    
                 <div class="alert alert-danger">
