@@ -28,7 +28,7 @@
         <form method="post" action="{{route('hall_bookings.store')}}">
 
             <div class="row">
-                <div class="col-md-3">
+                <div class="col-md-6">
                     <i class="icon icon-calendar2"></i>
                     <input type="hidden" name="hall_id" value="{{$halls->id}}">
                     <input type="hidden" name="user_id" value="{{Auth::user()->id}}">
