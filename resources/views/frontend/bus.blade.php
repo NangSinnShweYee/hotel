@@ -23,11 +23,11 @@
 							<li>{{$bus->description}}</li>
 							<li>{{$bus->depature_time}}</li>
 							<li>{{$bus->arrival_time}}</li>
-							@if($bus->guide=='1')
-								<li><i class="far fa-flag text-dark"></i>Guide</li>
+							@if($bus_packages->guide=='1')
+								<li><i class="far fa-flag text-dark"></i> Guide included </li>
 							@else
-								<li><i class="fas fa-times text-dark"></i>Guide</li>
-							@endif
+								<li><i class="fas fa-times text-dark"></i>Guide not included</li>
+							@endif 
 					</ul>
 					<a href="{{route('bus_packages.show',$bus->id)}}" class="btn btn-block btn-primary text-uppercase">More Info</a>
 					</div>

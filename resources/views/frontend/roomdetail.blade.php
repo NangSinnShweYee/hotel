@@ -38,27 +38,27 @@
                 </p>
                 <ul class="list-unstyled">
                             @if($rooms->aircorn=='1')
-                                <li><i class="fas fa-snowflake text-dark"></i>Air-con</li>
+                                <li><i class="fas fa-snowflake text-dark"></i> Air-con</li>
                             @else
-                                <li><i class="fas fa-times text-dark"></i>Air-con</li>
+                                <li><i class="fas fa-times text-dark"></i> Air-con</li>
                             @endif
 
                             @if($rooms->wifi=='1')
-                                <li><i class="fas fa-wifi text-dark"></i>Wifi</li>
+                                <li><i class="fas fa-wifi text-dark"></i> Wifi</li>
                             @else
-                                <li><i class="fas fa-times text-dark"></i>Wifi</li>
+                                <li><i class="fas fa-times text-dark"></i> Wifi</li>
                             @endif
 
                             @if($rooms->bathroom=='1')
-                                <li><i class="fas fa-bath text-dark"></i>Bathroom</li>
+                                <li><i class="fas fa-bath text-dark"></i> Bathroom</li>
                             @else
-                                <li><i class="fas fa-times text-dark"></i>Bathroom</li>
+                                <li><i class="fas fa-times text-dark"></i> Bathroom</li>
                             @endif
 
                             @if($rooms->tv=='1')
-                                <li><i class="fas fa-tv text-dark"></i>TV</li>
+                                <li><i class="fas fa-tv text-dark"></i> TV</li>
                             @else
-                                <li><i class="fas fa-times text-dark"></i>TV</li>
+                                <li><i class="fas fa-times text-dark"></i> TV</li>
                             @endif
 
                         </ul>

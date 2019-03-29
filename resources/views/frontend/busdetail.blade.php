@@ -14,9 +14,13 @@
 			<ul> 
 							<li>{{$bus_packages->places}}</li>
 							<li>{{$bus_packages->description}}</li>
-							<li>{{$bus_packages->depature_time}}</li>
-							<li>{{$bus_packages->arrival_time}}</li>
-							<li>{{$bus_packages->guide}}</li> 
+							<li>Depature Time:&nbsp; {{$bus_packages->depature_time}}</li>
+							<li>Arrival Time:&nbsp;{{$bus_packages->arrival_time}}</li>
+							@if($bus_packages->guide=='1')
+								<li><i class="far fa-flag text-dark"></i> Guide included </li>
+							@else
+								<li><i class="fas fa-times text-dark"></i>Guide not included</li>
+							@endif 
 					</ul>
 			 <p class="price" style="color:black">            
             <span class="currency">$</span>
