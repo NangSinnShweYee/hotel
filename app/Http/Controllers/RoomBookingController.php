@@ -73,10 +73,10 @@ class RoomBookingController extends Controller
              );
              $isOverlap = $calculator->isOverlap($baseTimeSlot, $overlappingTimeSlot);
         }
-        
+        $string = 'The room is not available in that time period. You can book after '.$testout;
 
         if($isOverlap){
-            return back()->with('overlap','The room is not available in that time period.');
+            return back()->with('overlap',$string);
             
         }
         else{
