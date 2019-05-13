@@ -55,7 +55,7 @@
                 <table class="table" id="myTable">
                     <thead>
                         <tr>
-                            <th>Room</th>
+                            <th>Room Description</th>
                             <th class="text-center">Room No</th>
                             <th class="text-center">Booked Days</th>
                             <th class="text-right">Price</th>

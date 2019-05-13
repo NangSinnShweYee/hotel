@@ -139,11 +139,16 @@ class RoomController extends Controller
         $rooms->room_number=request('room_number');
         $rooms->description=request('description');
         $rooms->price=request('price');
+        $rooms->wifi=request('wifi');
+        $rooms->bathroom=request('bathroom');
+        $rooms->aircorn=request('aircorn');
+        $rooms->tv=request('tv');
         $rooms->photo = $photoinput;
               $rooms->bedcount=request('bedcount');
               $rooms->save();
               return redirect('/rooms');
     }
+    
 
     /**
      * Remove the specified resource from storage.

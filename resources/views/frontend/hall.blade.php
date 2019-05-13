@@ -53,7 +53,7 @@
 						<li><i class="icon-check"></i> 
 							{{$hall->capacity}}</li>
 							<li><i class="fas fa-location-arrow"></i>{{$hall->location}}</li>
-							<li><i class="icon-check"></i>{{$hall->description}}</li>
+								
 						</ul>
 						<p><a class="btn btn-success" href="{{route('halls.show',$hall->id)}}">Book now!</a></p>
 				</div>

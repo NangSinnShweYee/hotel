@@ -102,13 +102,13 @@
 								<li><i class="fas fa-times text-dark"></i> TV</li>
 							@endif
 
-							<p>{{$room->description}}</p>
+							
 						</ul>
 						<p><a class="btn btn-success" href="{{route('rooms.show',$room->id)}}">Book now!</a></p>
 					</div>
 				</div>
 				@endforeach
-
+			
 			</div>
 			{{ $rooms->links() }}
 		</div>

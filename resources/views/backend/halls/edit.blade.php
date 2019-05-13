@@ -10,7 +10,7 @@
     <div class="card-header">
         Add Hall
     </div>
-    {{$halls}}
+    
     <div class="card-body">
         @if ($errors->any())
         <div class="alert alert-danger">

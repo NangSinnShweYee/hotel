@@ -17,6 +17,7 @@ class HallBookingController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    
     public function index()
     {
         //
@@ -72,7 +73,8 @@ class HallBookingController extends Controller
         
 
         if($isOverlap){
-            return back()->with('overlap','The Hall is not available in that time period.');
+            $string = 'The room is not available in that time period. You can book after '.$testout;
+            return back()->with('overlap',$string);
             
         }
         else{
